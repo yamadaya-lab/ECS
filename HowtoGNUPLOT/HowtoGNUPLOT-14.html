@@ -1,52 +1,110 @@
-<html>
-<title>How to use GNUPLOT: 11</title>
-<body>
-11. èn‚ß‚ÉA‚P—ñ–Ú‚ğ‰¡²‚Ì’l‚É‚Q—ñ–Ú‚ğc²‚Ì’l‚Æ‚·‚éƒOƒ‰ƒt‚ğ•`‚±‚¤B<br>
-<!--<font color="maroon">At first, let us assign the first column to the abscissa and the second column to the ordinate,<br>
-and display the graph.</font>--><p>
-ŠÖ”‚Ì‘ã‚í‚è‚Éƒf[ƒ^ƒtƒ@ƒCƒ‹–¼‚ğw’è‚·‚éB<br>
-<!--<font color="maroon">Instead of equations, you have to give the file name storing data.<br>
-And use <tt>using</tt> option to specify which columns are assigned to the abscissa and the ordinate respectively.</font>--><p>
-<tt>plot "Lorenz.txt" </tt><p>
-<img src="imgs/Lorenz-gp01.gif"><p>
-  ‚±‚¤‚µ‚ÄAX(t)‚ÌŒvZŒ‹‰Ê‚ğ•\¦‚·‚é‚±‚Æ‚ªo—ˆ‚½B<br>
-‚±‚±‚ÅA‰¡²Ec²‚É‰½—ñ–Ú‚Ìƒf[ƒ^‚ğ—p‚¢‚é‚Ì‚©w’è‚·‚é‚½‚ß‚É<tt> using </tt>‚ğ—p‚¢‚éB<br>
-  ¡“x‚ÍAc²‚É‚R—ñ–Ú‚Ì’l‚ğ—p‚¢‚ÄY(t)‚ÌŒvZŒ‹‰Ê‚ğ•\¦‚µ‚Ä‚İ‚æ‚¤B<br></p>
-<tt>plot "Lorenz.txt" using 1:3</tt><p>
-  ‚±‚Ì " using 1:3"ƒIƒvƒVƒ‡ƒ“‚ÍAx²‚É1—ñ–Ú‚ÌAy²‚É3—ñ–Ú‚Ìƒf[ƒ^—ñ‚ğg—p‚·‚é‚æ‚¤‚Éw’è‚µ‚Ä‚¢‚éB<br>
-  iusingƒIƒvƒVƒ‡ƒ“‚ğg‚í‚È‚¢ê‡‚ÍA‰Šúİ’è‚Æ‚µ‚Äx²‚É1—ñ–Ú‚ÌAy²‚É2—ñ–Ú‚Ìƒf[ƒ^—ñ‚ğg—p‚·‚éj<br>
- <!--<font color="maroon">Now you will see the graph of X(t). Next let us display the graph of Y(t).</font>--><p>
-<img src="imgs/Lorenz-gp02.gif"><p>
-ƒf[ƒ^ƒtƒ@ƒCƒ‹‚©‚çƒOƒ‰ƒt‚ğ•`‚­‚Æ‚«‚ÍA‚±‚Ì‚Q—á‚Ì‚æ‚¤‚ÉƒfƒtƒHƒ‹ƒg‚Å‚Í<br>
-“_(point)‚Å•\¦‚³‚ê‚éBƒ|ƒCƒ“ƒg‚ÌƒTƒCƒY‚ğ•Ï‚¦‚é‚É‚ÍƒZƒbƒg–½—ß‚ğ—p‚¢‚éB<br>
-<!--<font color="maroon">When plotting data, graph is drawn normally by points as seen in the above examples.<br>
-In order to adjust the size of points, you can use <tt>set</tt> instruction as follows.</font>--><p>
-<tt>set pointsize 0.5</tt><br>
-<tt>replot</tt><p>
-‚ğÀs‚µ‚Ä‚İ‚æ‚¤B“_‚ÌƒTƒCƒY‚Í‚±‚êŠÔ‚Ì”¼•ª‚É‚È‚Á‚Ä•\¦‚³‚ê‚éB<br>
-i•S•ª—¦‚Å©—R‚Éİ’è‚Å‚«‚é‚ªA‰æ–Ê•\¦‚Ì“s‡‚©‚çÀÛ‚É‚Í’iŠK“I‚É‚µ‚©•Ï‚í‚ç‚È‚¢Bj<br>
-<!--<font color="maroon">Let us run the above. You will see the size of points are half smaller.<br>
-(Actually, you can specify the size of points from 0 to 1, but on screen thier size is quantized.)</font>--><p>
-<img src="imgs/Lorenz-gp03.gif"><p>
-Šeƒf[ƒ^“_‚ğü(line)‚ÅŒ‹‚ñ‚Å•\¦‚µ‚½‚¢‚±‚Æ‚à‚ ‚éBŸ‚Ì‚æ‚¤‚É‚·‚ê‚Î‚æ‚¢B<br>
-<!--<font color="maroon">If you want to connect all points by lines, type as follows.</font>--><p>
-<tt>plot "Lorenz.txt" using 1:3 with lines</tt><p>
-<img src="imgs/Lorenz-gp04.gif"><p>
-ƒf[ƒ^“_‚ª‰½ˆ‚©‚à¦‚µ‚½‚¢‚µA’¼ü‚Å‚àŒ‹‚Ñ‚½‚¢ê‡‚Í<br>
-<!--<font color="maroon">In order to display both points and lines, try the following way.</font>--><p>
-<tt>plot "Lorenz.txt" using 1:3 with linespoints</tt><p>
-<img src="imgs/Lorenz-gp05.gif"><p>
-‚Æ‚·‚éB‚È‚¨ƒfƒtƒHƒ‹ƒg‚Ì“_‚Å‚Ì•\¦‚ğ“Á‚Éw¦‚µ‚½‚¢ê‡‚Í<tt> with points </tt>‚Æw’è‚·‚éB<br>
-‚»‚Ì‚Ù‚©‚É‚àŒë·•\¦(errorbar)‚â‰æ‘f‚P“_(dot)‚É‚æ‚é•\¦‚È‚Ç‚à‰Â”\‚Å‚ ‚éBhelp‚ğQÆ‚¹‚æB<br>
-<!--<font color="maroon">In order to specify to display by points, use the following option <tt>with points</tt>.<br>
-There are some other plot styles like error-bar and simple dot. See help window.</font>--><p>
-
-  <hr>
-  <h3>TIPS</h3>
-<p>ƒOƒ‰ƒtƒEƒBƒ“ƒhƒE‚ğƒAƒNƒeƒBƒu‚É‚µ‚ÄA'e' ‚ğ‰Ÿ‚µ‚Ä‚à replot ‚³‚ê‚éB</p>
-
-<hr>
-
-<a href="HowtoGNUPLOT-13.html">‘O‚Ö(prev.)</a>E<a href="HowtoGNUPLOT-15.html">Ÿ‚Ö(next)</a>E<a href="Toc.html">–ÚŸ‚Ö(toc)</a>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>How to use GNUPLOT: 11</title>
+	</head>
+
+<body>
+
+11. æ‰‹å§‹ã‚ã«ã€ï¼‘åˆ—ç›®ã‚’æ¨ªè»¸ã®å€¤ã«ï¼’åˆ—ç›®ã‚’ç¸¦è»¸ã®å€¤ã¨ã™ã‚‹ã‚°ãƒ©ãƒ•ã‚’æã“ã†ã€‚<br>
+
+<!--<font color="maroon">At first, let us assign the first column to the abscissa and the second column to the ordinate,<br>
+
+and display the graph.</font>--><p>
+
+é–¢æ•°ã®ä»£ã‚ã‚Šã«ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«åã‚’æŒ‡å®šã™ã‚‹ã€‚<br>
+
+<!--<font color="maroon">Instead of equations, you have to give the file name storing data.<br>
+
+And use <tt>using</tt> option to specify which columns are assigned to the abscissa and the ordinate respectively.</font>--><p>
+
+<tt>plot "Lorenz.txt" </tt><p>
+
+<img src="imgs/Lorenz-gp01.gif"><p>
+
+  ã“ã†ã—ã¦ã€X(t)ã®è¨ˆç®—çµæœã‚’è¡¨ç¤ºã™ã‚‹ã“ã¨ãŒå‡ºæ¥ãŸã€‚<br>
+
+ã“ã“ã§ã€æ¨ªè»¸ãƒ»ç¸¦è»¸ã«ä½•åˆ—ç›®ã®ãƒ‡ãƒ¼ã‚¿ã‚’ç”¨ã„ã‚‹ã®ã‹æŒ‡å®šã™ã‚‹ãŸã‚ã«<tt> using </tt>ã‚’ç”¨ã„ã‚‹ã€‚<br>
+
+  ä»Šåº¦ã¯ã€ç¸¦è»¸ã«ï¼“åˆ—ç›®ã®å€¤ã‚’ç”¨ã„ã¦Y(t)ã®è¨ˆç®—çµæœã‚’è¡¨ç¤ºã—ã¦ã¿ã‚ˆã†ã€‚<br></p>
+
+<tt>plot "Lorenz.txt" using 1:3</tt><p>
+
+  ã“ã® " using 1:3"ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã¯ã€xè»¸ã«1åˆ—ç›®ã®ã€yè»¸ã«3åˆ—ç›®ã®ãƒ‡ãƒ¼ã‚¿åˆ—ã‚’ä½¿ç”¨ã™ã‚‹ã‚ˆã†ã«æŒ‡å®šã—ã¦ã„ã‚‹ã€‚<br>
+
+  ï¼ˆusingã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’ä½¿ã‚ãªã„å ´åˆã¯ã€åˆæœŸè¨­å®šã¨ã—ã¦xè»¸ã«1åˆ—ç›®ã®ã€yè»¸ã«2åˆ—ç›®ã®ãƒ‡ãƒ¼ã‚¿åˆ—ã‚’ä½¿ç”¨ã™ã‚‹ï¼‰<br>
+
+ <!--<font color="maroon">Now you will see the graph of X(t). Next let us display the graph of Y(t).</font>--><p>
+
+<img src="imgs/Lorenz-gp02.gif"><p>
+
+ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã‚°ãƒ©ãƒ•ã‚’æãã¨ãã¯ã€ã“ã®ï¼’ä¾‹ã®ã‚ˆã†ã«ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ã¯<br>
+
+ç‚¹(point)ã§è¡¨ç¤ºã•ã‚Œã‚‹ã€‚ãƒã‚¤ãƒ³ãƒˆã®ã‚µã‚¤ã‚ºã‚’å¤‰ãˆã‚‹ã«ã¯ã‚»ãƒƒãƒˆå‘½ä»¤ã‚’ç”¨ã„ã‚‹ã€‚<br>
+
+<!--<font color="maroon">When plotting data, graph is drawn normally by points as seen in the above examples.<br>
+
+In order to adjust the size of points, you can use <tt>set</tt> instruction as follows.</font>--><p>
+
+<tt>set pointsize 0.5</tt><br>
+
+<tt>replot</tt><p>
+
+ã‚’å®Ÿè¡Œã—ã¦ã¿ã‚ˆã†ã€‚ç‚¹ã®ã‚µã‚¤ã‚ºã¯ã“ã‚Œé–“ã®åŠåˆ†ã«ãªã£ã¦è¡¨ç¤ºã•ã‚Œã‚‹ã€‚<br>
+
+ï¼ˆç™¾åˆ†ç‡ã§è‡ªç”±ã«è¨­å®šã§ãã‚‹ãŒã€ç”»é¢è¡¨ç¤ºã®éƒ½åˆã‹ã‚‰å®Ÿéš›ã«ã¯æ®µéšçš„ã«ã—ã‹å¤‰ã‚ã‚‰ãªã„ã€‚ï¼‰<br>
+
+<!--<font color="maroon">Let us run the above. You will see the size of points are half smaller.<br>
+
+(Actually, you can specify the size of points from 0 to 1, but on screen thier size is quantized.)</font>--><p>
+
+<img src="imgs/Lorenz-gp03.gif"><p>
+
+å„ãƒ‡ãƒ¼ã‚¿ç‚¹ã‚’ç·š(line)ã§çµã‚“ã§è¡¨ç¤ºã—ãŸã„ã“ã¨ã‚‚ã‚ã‚‹ã€‚æ¬¡ã®ã‚ˆã†ã«ã™ã‚Œã°ã‚ˆã„ã€‚<br>
+
+<!--<font color="maroon">If you want to connect all points by lines, type as follows.</font>--><p>
+
+<tt>plot "Lorenz.txt" using 1:3 with lines</tt><p>
+
+<img src="imgs/Lorenz-gp04.gif"><p>
+
+ãƒ‡ãƒ¼ã‚¿ç‚¹ãŒä½•å‡¦ã‹ã‚‚ç¤ºã—ãŸã„ã—ã€ç›´ç·šã§ã‚‚çµã³ãŸã„å ´åˆã¯<br>
+
+<!--<font color="maroon">In order to display both points and lines, try the following way.</font>--><p>
+
+<tt>plot "Lorenz.txt" using 1:3 with linespoints</tt><p>
+
+<img src="imgs/Lorenz-gp05.gif"><p>
+
+ã¨ã™ã‚‹ã€‚ãªãŠãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ç‚¹ã§ã®è¡¨ç¤ºã‚’ç‰¹ã«æŒ‡ç¤ºã—ãŸã„å ´åˆã¯<tt> with points </tt>ã¨æŒ‡å®šã™ã‚‹ã€‚<br>
+
+ãã®ã»ã‹ã«ã‚‚èª¤å·®è¡¨ç¤º(errorbar)ã‚„ç”»ç´ ï¼‘ç‚¹(dot)ã«ã‚ˆã‚‹è¡¨ç¤ºãªã©ã‚‚å¯èƒ½ã§ã‚ã‚‹ã€‚helpã‚’å‚ç…§ã›ã‚ˆã€‚<br>
+
+<!--<font color="maroon">In order to specify to display by points, use the following option <tt>with points</tt>.<br>
+
+There are some other plot styles like error-bar and simple dot. See help window.</font>--><p>
+
+
+
+  <hr>
+
+  <h3>TIPS</h3>
+
+<p>ã‚°ãƒ©ãƒ•ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ã«ã—ã¦ã€'e' ã‚’æŠ¼ã—ã¦ã‚‚ replot ã•ã‚Œã‚‹ã€‚</p>
+
+
+
+<hr>
+
+
+
+<a href="HowtoGNUPLOT-13.html">å‰ã¸(prev.)</a>ãƒ»<a href="HowtoGNUPLOT-15.html">æ¬¡ã¸(next)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡ã¸(toc)</a>
+
+</body>
+
+</html>
+
+
