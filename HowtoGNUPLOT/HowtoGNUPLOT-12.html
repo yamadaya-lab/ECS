@@ -1,39 +1,84 @@
-<html>
-<title>How to GNUPLOT: 9</title>
-<body>
-9. c²‚ğ‘Î”–Ú·‚è‚Å•\¦‚·‚é‚±‚Æ‚ào—ˆ‚éB
-Ÿ‚Ìset–½—ß‚Åc²‚ğ‘Î”ƒ‚[ƒh‚É‚·‚éB<br>
-<!--<font color="maroon">Logarithmic scale is of course available for the ordinate.</font>--><p>
-<tt> set log y</tt><p>
-‚±‚±‚ÅA<tt>plot [-1:1][0.1:10] exp(x) </tt>‚ğÀs‚·‚é‚ÆƒOƒ‰ƒt‚Í’¼ü‚Å•\¦‚³‚ê‚éB<br>
-<!--<font color="maroon">Running <tt>plot [-1:1][0.1:10] exp(x)</tt>, you will see the straight line.</font>--><p>
-<img src="imgs/plot-10.gif"><p>
-Šm‚©‚Éc²‚Í‘Î”–Ú·‚è‚¾B<br>
-<b>‰—p–â‘èF</b>•\¦‚³‚ê‚½’¼ü‚ÌŒX‚«‚Í‚¢‚­‚ç‚©B<br>
-<!--<font color="maroon">This means the ordinate scale is surely logarithmic.<br>
-<b>applied question:</b> Deduce the slope of the line displayed here.</font>--><p>
-
-‘Î”•ûŠá†‚Ì‚æ‚¤‚Éc²‚Ì–Ú·‚ğ•ûŠá•\¦‚³‚¹‚Ä‚İ‚éB<br>
-c²‚Ì¬–Ú·‚à•ûŠá•\¦‚·‚é‚É‚ÍAŸ‚Ì‚æ‚¤‚Éƒ‚[ƒhƒZƒbƒg‚·‚éB<br>
-<!--<font color="maroon">You can display like logarithmic paper with setting the grid mode as the following.</font>--><p>
-<tt>set grid ytics mytics</tt><br>
-<tt>replot</tt><p>
-<img src="imgs/plot-11.gif"><p>
-‘Î”ƒ‚[ƒh‚©‚ç’Êí‚ÌüŒ`(ƒŠƒjƒA)ƒ‚[ƒh‚É–ß‚·‚É‚ÍA<br>
-<!--<font color="maroon">If you want to return to the linear scale, turn off the logarithmic mode.</font>--><p>
-<tt>set nolog y</tt><br>
-<tt>plot [-1:1] exp(x)</tt><p>
-<img src="imgs/plot-09.gif"><p>
-ƒt[ƒŠƒG‰ğÍ‚µ‚½Œ‹‰Ê‚Ì•\¦‚È‚ÇA‰¡²‚ğ‘Î”–Ú·‚É‚µ‚½‚¢ê‡‚Í<br>
-<!--<font color="maroon">To set the logarithmic mode for the abscissa, for example in order to show results of FFT, type the following.</font>--><p>
-<tt> set log x </tt>‚Æ‚·‚ê‚Î‚æ‚¢B<p>
-
-  <hr>
-  <h3>TIPS</h3>
-<p>ƒOƒ‰ƒtƒEƒBƒ“ƒhƒE‚ğƒAƒNƒeƒBƒu‚É‚µ‚ÄA'l' ‚ğ‰Ÿ‚µ‚Ä‚à‘Î”ƒƒ‚ƒŠƒ‚[ƒhic²‚Ì‚İj‚Ì On/Off ‚ªØ‚è‘Ö‚í‚éB</p>
-
-<hr>
-
-<a href="HowtoGNUPLOT-11.html">‘O‚Ö(prev.)</a>E<a href="HowtoGNUPLOT-13.html">Ÿ‚Ö(next)</a>E<a href="Toc.html">–ÚŸ‚Ö(toc)</a>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>How to use GNUPLOT: 9</title>
+	</head>
+
+<body>
+
+9. ç¸¦è»¸ã‚’å¯¾æ•°ç›®ç››ã‚Šã§è¡¨ç¤ºã™ã‚‹ã“ã¨ã‚‚å‡ºæ¥ã‚‹ã€‚
+
+æ¬¡ã®setå‘½ä»¤ã§ç¸¦è»¸ã‚’å¯¾æ•°ãƒ¢ãƒ¼ãƒ‰ã«ã™ã‚‹ã€‚<br>
+
+<!--<font color="maroon">Logarithmic scale is of course available for the ordinate.</font>--><p>
+
+<tt> set log y</tt><p>
+
+ã“ã“ã§ã€<tt>plot [-1:1][0.1:10] exp(x) </tt>ã‚’å®Ÿè¡Œã™ã‚‹ã¨ã‚°ãƒ©ãƒ•ã¯ç›´ç·šã§è¡¨ç¤ºã•ã‚Œã‚‹ã€‚<br>
+
+<!--<font color="maroon">Running <tt>plot [-1:1][0.1:10] exp(x)</tt>, you will see the straight line.</font>--><p>
+
+<img src="imgs/plot-10.gif"><p>
+
+ç¢ºã‹ã«ç¸¦è»¸ã¯å¯¾æ•°ç›®ç››ã‚Šã ã€‚<br>
+
+<b>å¿œç”¨å•é¡Œï¼š</b>è¡¨ç¤ºã•ã‚ŒãŸç›´ç·šã®å‚¾ãã¯ã„ãã‚‰ã‹ã€‚<br>
+
+<!--<font color="maroon">This means the ordinate scale is surely logarithmic.<br>
+
+<b>applied question:</b> Deduce the slope of the line displayed here.</font>--><p>
+
+
+
+å¯¾æ•°æ–¹çœ¼ç´™ã®ã‚ˆã†ã«ç¸¦è»¸ã®ç›®ç››ã‚’æ–¹çœ¼è¡¨ç¤ºã•ã›ã¦ã¿ã‚‹ã€‚<br>
+
+ç¸¦è»¸ã®å°ç›®ç››ã‚‚æ–¹çœ¼è¡¨ç¤ºã™ã‚‹ã«ã¯ã€æ¬¡ã®ã‚ˆã†ã«ãƒ¢ãƒ¼ãƒ‰ã‚»ãƒƒãƒˆã™ã‚‹ã€‚<br>
+
+<!--<font color="maroon">You can display like logarithmic paper with setting the grid mode as the following.</font>--><p>
+
+<tt>set grid ytics mytics</tt><br>
+
+<tt>replot</tt><p>
+
+<img src="imgs/plot-11.gif"><p>
+
+å¯¾æ•°ãƒ¢ãƒ¼ãƒ‰ã‹ã‚‰é€šå¸¸ã®ç·šå½¢(ãƒªãƒ‹ã‚¢)ãƒ¢ãƒ¼ãƒ‰ã«æˆ»ã™ã«ã¯ã€<br>
+
+<!--<font color="maroon">If you want to return to the linear scale, turn off the logarithmic mode.</font>--><p>
+
+<tt>set nolog y</tt><br>
+
+<tt>plot [-1:1] exp(x)</tt><p>
+
+<img src="imgs/plot-09.gif"><p>
+
+ãƒ•ãƒ¼ãƒªã‚¨è§£æã—ãŸçµæœã®è¡¨ç¤ºãªã©ã€æ¨ªè»¸ã‚’å¯¾æ•°ç›®ç››ã«ã—ãŸã„å ´åˆã¯<br>
+
+<!--<font color="maroon">To set the logarithmic mode for the abscissa, for example in order to show results of FFT, type the following.</font>--><p>
+
+<tt> set log x </tt>ã¨ã™ã‚Œã°ã‚ˆã„ã€‚<p>
+
+
+
+  <hr>
+
+  <h3>TIPS</h3>
+
+<p>ã‚°ãƒ©ãƒ•ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ã«ã—ã¦ã€'l' ã‚’æŠ¼ã—ã¦ã‚‚å¯¾æ•°ãƒ¡ãƒ¢ãƒªãƒ¢ãƒ¼ãƒ‰ï¼ˆç¸¦è»¸ã®ã¿ï¼‰ã® On/Off ãŒåˆ‡ã‚Šæ›¿ã‚ã‚‹ã€‚</p>
+
+
+
+<hr>
+
+
+
+<a href="HowtoGNUPLOT-11.html">å‰ã¸(prev.)</a>ãƒ»<a href="HowtoGNUPLOT-13.html">æ¬¡ã¸(next)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡ã¸(toc)</a>
+
+</body>
+
+</html>
+
+
