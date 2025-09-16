@@ -1,75 +1,156 @@
-<html>
-<title>How to use GNUPLOT: 13</title>
-<body>
-13. ƒ[ƒŒƒ“ƒc•û’ö®‚ÍX(t), Y(t), Z(t)‚Ì‚R•Ï”‚ÌŠÔ”­“W‚Å‘Î—¬Œ»Û‚Ì•¡G‚³‚ğ–Í‚µ‚½‚à‚Ì‚¾B<br>
-<!--<font color="maroon">Lorenz' equation system shows time evolution of three variables<br>
-which models the complex manner of convection phenomena.</font>--><p>
-GNUPLOT‚É‚Í‚±‚ê‚Ü‚Å‚ÉŠw‚ñ‚¾‚QŸŒ³‚ÌƒOƒ‰ƒt•`‰æ‚É‰Á‚¦‚ÄA‚RŸŒ³‹óŠÔ’†‚É‹O“¹‚ğ•`‚­–½—ß‚à—pˆÓ‚³‚ê‚Ä‚¢‚éB<br>
-<!--<font color="maroon">GNUPLOT can display trajectories in 3-dimensional space in addtion to create 2-dim. graphs.</font>--><p>
-<tt>set xlabel "X(t)"<br>
-set ylabel "Y(t)"<br>
-set zlabel "Z(t)"<br>
-splot "Lorenz.txt" using 2:3:4 with lines </tt>‚ğÀs‚µ‚Ä‚İ‚æ‚¤B<br>
-‚±‚Ì " using 2:3:4"ƒIƒvƒVƒ‡ƒ“‚ÍAx²‚É2—ñ–Ú‚ÌAy²‚É3—ñ–Ú‚ÌAz²‚É4—ñ–Ú‚Ìƒf[ƒ^‚ğg—p‚·‚é‚æ‚¤‚Éw’è‚µ‚Ä‚¢‚éB
-<!--<font color="maroon">Let us run the above.</font>--><p>
-<img src="imgs/Lorenz-gp10.gif"><p>
-Œ©‚½‚±‚Æ‚Ì‚ ‚éƒJƒIƒXƒAƒgƒ‰ƒNƒ^‚ª•`‚©‚ê‚½‚Í‚¸‚¾B<br>
-<!--<font color="maroon">You will see the chaos attractor which you have ever seen.</font>--><p>
-‚RŸŒ³•\¦o—ˆ‚é‚ÆAŸ‚É‚µ‚½‚­‚È‚é‚Ì‚ÍFX‚ÈŠp“x‚©‚ç’­‚ß‚é‚±‚Æ¥¥¥A<br>
-Œü‚±‚¤‘¤‚©‚çŒ©‚½‚çA‚ ‚é‚¢‚Íã‚©‚çŒ©‰º‚ë‚µ‚½‚çA¥¥¥‚Ç‚Ì‚æ‚¤‚È’­‚ß‚É‚È‚é‚Ì‚¾‚ë‚¤B<br>
-GNUPLOT‚Å‚Í’­‚ß‚éŠp“x‚ğ©İ‚Éw’èo—ˆ‚é‚µAŠp“x‚ğ­‚µ‚¸‚Â•Ï‚¦‚È‚ª‚ç‰æ‘œƒf[ƒ^‚Æ‚µ‚Ä•Û‘¶‚µA<br>
-‚»‚ê‚ç‚ğ˜AŒ‹‚·‚ê‚ÎƒAƒjƒ[ƒVƒ‡ƒ“•\¦‚·‚ç‰Â”\‚¾B<br>
-<!--<font color="maroon">Then, you will think if you could see it from various view points. or varios directions.<br>
-You can freely set the direction of view. And you can create movie by storing plot for each view and<br>
-connecting with varing view direction.</font>--><p> 
-‚Ü‚¸ã‚©‚ç’­‚ß‚Ä‚İ‚æ‚¤B<br>
-<!--<font color="maroon">At first, let us try to see from the top.</font>--><p>
-<tt>set view 20,30<br>
-set grid<br>
-replot</tt><p>
-<img src="imgs/Lorenz-gp11.gif"><p>
-xy•½–Ê‚ğ•\‚·Šiq‚ğŒ©‚é‚ÆAæ‚Ù‚Ç‚æ‚è‚à‚‚¢Šp“x‚©‚ç’­‚ß‚Ä‚¢‚é‚±‚Æ‚ª•ª‚©‚é‚¾‚ë‚¤B<br>
-set view ‚É‚æ‚éƒ‚[ƒhİ’è‚Ì‚P‚Â–Ú‚Ì’l‚Íã‰º•ûŒü‚Ì’­‚ß‚éŠp“x‚ğw’è‚·‚é‚à‚Ì‚ÅA<br>
-‰Šú’l‚Í60“x‚Å‚ ‚éB‚Ü‚½0“x‚Åxy•½–Ê‚ğ^ã‚©‚ç’­‚ß‚é‚±‚Æ‚É‘Š“–‚·‚éB<br>
-‚Ü‚½<tt>set grid</tt>‚ğ—p‚¢‚é‚Æxy•½–Êã‚ÉŠiq‚ğ•`‚­B<br>
-<!--<font color="maroon">You can understand your view point is higher than before<br>
-from the shape of the grid of xy-plane. The first argument of <tt>set view</tt> means<br>
-the angle of elevation.<br>
-Additionally we can put grid on xy-plane by <tt>set grid</tt> in 3D mode.</font>--><p>
-<tt>set view 0,30</tt> i^ã <font color="maroon">top view</font>j<br>
-<tt>set view 90,30</tt> i^‰¡ <font color="maroon">horizontal view</font>j<p>
-‚È‚Ç‚Ìİ’è‚ğ‚µ‚Ä‚İ‚é‚Æ—Ç‚¢B0‚©‚ç180“x‚Ü‚Å‚ğw’è‚Å‚«‚éB<br>
-<!--<font color="maroon">To try to the above settings is good to understand how to set view point.</font>--><p>
-<b>—ûK–â‘èF</b>^‰º‚©‚ç’­‚ß‚Ä‚İ‚æB<br>
-<!--<font color="maroon"><b>Exercise :</b> Display the bottom view.</font>--><p>
-Ÿ‚É’­‚ß‚é•ûŠp‚ğ•Ï‚¦‚ÄAŒü‚±‚¤‘¤‚©‚ç’­‚ß‚Ä‚İ‚æ‚¤B
-ã‰ºŠp‚ÍŒ³‚Ì60“x‚É–ß‚µ‚ÄA2‚Â–Ú‚ÌŠp“x’l‚ğ’²®‚·‚éB<br>
-<!--<font color="maroon">Next let us try to change the horizontal direction. Set 60deg. for elevation angle again.<br>
-And then we will adjust the second angle argument like the following.</font>--><p> 
-<tt>set view 60,210</tt><br>
-<tt>replot</tt><p>
-<img src="imgs/Lorenz-gp12.gif"><p>
-x²‚ây²‚Ì–Ú·‚Ì‘å¬‚ÌŒü‚«‚ª‹t“]‚µ‚Ä‚¢‚é‚±‚Æ‚É’ˆÓB<br>
-‚±‚ê‚ÍA180“x‰ñ‚Á‚Ä”½‘Î‘¤‚©‚ç’­‚ß‚Ä‚¢‚é‚½‚ß‚¾B<br>
-’­‚ß‚é•ûŒü‚Í0“x‚©‚ç360“x‚Ì”ÍˆÍ‚Åw’è‚Å‚«‚éB<br>
-<!--<font color="maroon">You can see the scales of x and y are of opposite direction respectively.<br>
-Thus you are looking from the opposite side now. You can set the view direction from 0 to 360deg.</font>--><p>
-<b>‰—p–â‘èF</b>‚RŸŒ³•\¦‚ğ‰—p‚µ‚ÄAXY•½–Êã‚ğ(X(t),Y(t))‚ªŠÔ”­“W‚µ‚Ä‚¢‚­—lq‚ğ•`‚­}–Ê‚ğ•`‰æ‚¹‚æB<br>
-ƒqƒ“ƒgFGNUPLOT‚Ìx²‚ğŠÔ²‚Éæ‚èA“¯y²‚ğX(t)Az²‚ğY(t)‚Ì•\¦‚ÉŠ„‚è“–‚Ä‚æB<br>
-<!--<font color="maroon"><b>Applied question :</b> Display the time evolution of (X(t),Y(t)) on xy-plane, utilizing 3-dim. plot.<br>
-Hint: Take x-axis of GNUPLOT as time axis, y-axis as X(t), and z-axis as Y(t).</font>--><p>
-
-  <hr>
-  <h3>TIPS</h3>
-  <p>ƒ}ƒEƒX¶ƒ{ƒ^ƒ“‚Åƒhƒ‰ƒbƒO‚µ‚Ä‚à‹“_‚ğ•Ï‚¦‚ç‚ê‚éD<br>
-    Ctrl ‚ğ‰Ÿ‚µ‚È‚ª‚ç‰ñ“]‚³‚¹‚é‚ÆCQuick Draw(²‚Ì‚İ‚ª•\¦‚³‚ê‚é) ƒ‚[ƒh‚É‚È‚éD</p>
-  <p>’†ƒ{ƒ^ƒ“‚Ìcƒhƒ‰ƒbƒO‚Åz²Šg‘åk¬C‰¡ƒhƒ‰ƒbƒO‚ÅƒOƒ‰ƒt‘S‘ÌŠg‘åk¬D<br>
-    i3ƒ{ƒ^ƒ“‚Ìƒ}ƒEƒX‚Ìê‡D‚È‚­‚Ä‚à‚à‚µ‚©‚µ‚½‚ç¶‰E“¯‰Ÿ‚µ‚ÅƒGƒ~ƒ…ƒŒ[ƒg‚Å‚«‚é‚©‚àHj
-  </p>
-  <hr>
-
-
-  <a href="HowtoGNUPLOT-15.html">‘O‚Ö(prev.)</a>E<a href="HowtoGNUPLOT-16.5.html">Ÿ‚Ö(next)</a>E<a href="Toc.html">–ÚŸ‚Ö(toc)</a>
-</body>
-</html>
-
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>How to use GNUPLOT: 13</title>
+	</head>
+
+<body>
+
+13. ãƒ­ãƒ¼ãƒ¬ãƒ³ãƒ„æ–¹ç¨‹å¼ã¯X(t), Y(t), Z(t)ã®ï¼“å¤‰æ•°ã®æ™‚é–“ç™ºå±•ã§å¯¾æµç¾è±¡ã®è¤‡é›‘ã•ã‚’æ¨¡ã—ãŸã‚‚ã®ã ã€‚<br>
+
+<!--<font color="maroon">Lorenz' equation system shows time evolution of three variables<br>
+
+which models the complex manner of convection phenomena.</font>--><p>
+
+GNUPLOTã«ã¯ã“ã‚Œã¾ã§ã«å­¦ã‚“ã ï¼’æ¬¡å…ƒã®ã‚°ãƒ©ãƒ•æç”»ã«åŠ ãˆã¦ã€ï¼“æ¬¡å…ƒç©ºé–“ä¸­ã«è»Œé“ã‚’æãå‘½ä»¤ã‚‚ç”¨æ„ã•ã‚Œã¦ã„ã‚‹ã€‚<br>
+
+<!--<font color="maroon">GNUPLOT can display trajectories in 3-dimensional space in addtion to create 2-dim. graphs.</font>--><p>
+
+<tt>set xlabel "X(t)"<br>
+
+set ylabel "Y(t)"<br>
+
+set zlabel "Z(t)"<br>
+
+splot "Lorenz.txt" using 2:3:4 with lines </tt>ã‚’å®Ÿè¡Œã—ã¦ã¿ã‚ˆã†ã€‚<br>
+
+ã“ã® " using 2:3:4"ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã¯ã€xè»¸ã«2åˆ—ç›®ã®ã€yè»¸ã«3åˆ—ç›®ã®ã€zè»¸ã«4åˆ—ç›®ã®ãƒ‡ãƒ¼ã‚¿ã‚’ä½¿ç”¨ã™ã‚‹ã‚ˆã†ã«æŒ‡å®šã—ã¦ã„ã‚‹ã€‚
+
+<!--<font color="maroon">Let us run the above.</font>--><p>
+
+<img src="imgs/Lorenz-gp10.gif"><p>
+
+è¦‹ãŸã“ã¨ã®ã‚ã‚‹ã‚«ã‚ªã‚¹ã‚¢ãƒˆãƒ©ã‚¯ã‚¿ãŒæã‹ã‚ŒãŸã¯ãšã ã€‚<br>
+
+<!--<font color="maroon">You will see the chaos attractor which you have ever seen.</font>--><p>
+
+ï¼“æ¬¡å…ƒè¡¨ç¤ºå‡ºæ¥ã‚‹ã¨ã€æ¬¡ã«ã—ãŸããªã‚‹ã®ã¯è‰²ã€…ãªè§’åº¦ã‹ã‚‰çœºã‚ã‚‹ã“ã¨ï½¥ï½¥ï½¥ã€<br>
+
+å‘ã“ã†å´ã‹ã‚‰è¦‹ãŸã‚‰ã€ã‚ã‚‹ã„ã¯ä¸Šã‹ã‚‰è¦‹ä¸‹ã‚ã—ãŸã‚‰ã€ï½¥ï½¥ï½¥ã©ã®ã‚ˆã†ãªçœºã‚ã«ãªã‚‹ã®ã ã‚ã†ã€‚<br>
+
+GNUPLOTã§ã¯çœºã‚ã‚‹è§’åº¦ã‚’è‡ªåœ¨ã«æŒ‡å®šå‡ºæ¥ã‚‹ã—ã€è§’åº¦ã‚’å°‘ã—ãšã¤å¤‰ãˆãªãŒã‚‰ç”»åƒãƒ‡ãƒ¼ã‚¿ã¨ã—ã¦ä¿å­˜ã—ã€<br>
+
+ãã‚Œã‚‰ã‚’é€£çµã™ã‚Œã°ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³è¡¨ç¤ºã™ã‚‰å¯èƒ½ã ã€‚<br>
+
+<!--<font color="maroon">Then, you will think if you could see it from various view points. or varios directions.<br>
+
+You can freely set the direction of view. And you can create movie by storing plot for each view and<br>
+
+connecting with varing view direction.</font>--><p> 
+
+ã¾ãšä¸Šã‹ã‚‰çœºã‚ã¦ã¿ã‚ˆã†ã€‚<br>
+
+<!--<font color="maroon">At first, let us try to see from the top.</font>--><p>
+
+<tt>set view 20,30<br>
+
+set grid<br>
+
+replot</tt><p>
+
+<img src="imgs/Lorenz-gp11.gif"><p>
+
+xyå¹³é¢ã‚’è¡¨ã™æ ¼å­ã‚’è¦‹ã‚‹ã¨ã€å…ˆã»ã©ã‚ˆã‚Šã‚‚é«˜ã„è§’åº¦ã‹ã‚‰çœºã‚ã¦ã„ã‚‹ã“ã¨ãŒåˆ†ã‹ã‚‹ã ã‚ã†ã€‚<br>
+
+set view ã«ã‚ˆã‚‹ãƒ¢ãƒ¼ãƒ‰è¨­å®šã®ï¼‘ã¤ç›®ã®å€¤ã¯ä¸Šä¸‹æ–¹å‘ã®çœºã‚ã‚‹è§’åº¦ã‚’æŒ‡å®šã™ã‚‹ã‚‚ã®ã§ã€<br>
+
+åˆæœŸå€¤ã¯60åº¦ã§ã‚ã‚‹ã€‚ã¾ãŸ0åº¦ã§xyå¹³é¢ã‚’çœŸä¸Šã‹ã‚‰çœºã‚ã‚‹ã“ã¨ã«ç›¸å½“ã™ã‚‹ã€‚<br>
+
+ã¾ãŸ<tt>set grid</tt>ã‚’ç”¨ã„ã‚‹ã¨xyå¹³é¢ä¸Šã«æ ¼å­ã‚’æãã€‚<br>
+
+<!--<font color="maroon">You can understand your view point is higher than before<br>
+
+from the shape of the grid of xy-plane. The first argument of <tt>set view</tt> means<br>
+
+the angle of elevation.<br>
+
+Additionally we can put grid on xy-plane by <tt>set grid</tt> in 3D mode.</font>--><p>
+
+<tt>set view 0,30</tt> ï¼ˆçœŸä¸Š <font color="maroon">top view</font>ï¼‰<br>
+
+<tt>set view 90,30</tt> ï¼ˆçœŸæ¨ª <font color="maroon">horizontal view</font>ï¼‰<p>
+
+ãªã©ã®è¨­å®šã‚’è©¦ã—ã¦ã¿ã‚‹ã¨è‰¯ã„ã€‚0ã‹ã‚‰180åº¦ã¾ã§ã‚’æŒ‡å®šã§ãã‚‹ã€‚<br>
+
+<!--<font color="maroon">To try to the above settings is good to understand how to set view point.</font>--><p>
+
+<b>ç·´ç¿’å•é¡Œï¼š</b>çœŸä¸‹ã‹ã‚‰çœºã‚ã¦ã¿ã‚ˆã€‚<br>
+
+<!--<font color="maroon"><b>Exercise :</b> Display the bottom view.</font>--><p>
+
+æ¬¡ã«çœºã‚ã‚‹æ–¹è§’ã‚’å¤‰ãˆã¦ã€å‘ã“ã†å´ã‹ã‚‰çœºã‚ã¦ã¿ã‚ˆã†ã€‚
+
+ä¸Šä¸‹è§’ã¯å…ƒã®60åº¦ã«æˆ»ã—ã¦ã€2ã¤ç›®ã®è§’åº¦å€¤ã‚’èª¿æ•´ã™ã‚‹ã€‚<br>
+
+<!--<font color="maroon">Next let us try to change the horizontal direction. Set 60deg. for elevation angle again.<br>
+
+And then we will adjust the second angle argument like the following.</font>--><p> 
+
+<tt>set view 60,210</tt><br>
+
+<tt>replot</tt><p>
+
+<img src="imgs/Lorenz-gp12.gif"><p>
+
+xè»¸ã‚„yè»¸ã®ç›®ç››ã®å¤§å°ã®å‘ããŒé€†è»¢ã—ã¦ã„ã‚‹ã“ã¨ã«æ³¨æ„ã€‚<br>
+
+ã“ã‚Œã¯ã€180åº¦å›ã£ã¦åå¯¾å´ã‹ã‚‰çœºã‚ã¦ã„ã‚‹ãŸã‚ã ã€‚<br>
+
+çœºã‚ã‚‹æ–¹å‘ã¯0åº¦ã‹ã‚‰360åº¦ã®ç¯„å›²ã§æŒ‡å®šã§ãã‚‹ã€‚<br>
+
+<!--<font color="maroon">You can see the scales of x and y are of opposite direction respectively.<br>
+
+Thus you are looking from the opposite side now. You can set the view direction from 0 to 360deg.</font>--><p>
+
+<b>å¿œç”¨å•é¡Œï¼š</b>ï¼“æ¬¡å…ƒè¡¨ç¤ºã‚’å¿œç”¨ã—ã¦ã€XYå¹³é¢ä¸Šã‚’(X(t),Y(t))ãŒæ™‚é–“ç™ºå±•ã—ã¦ã„ãæ§˜å­ã‚’æãå›³é¢ã‚’æç”»ã›ã‚ˆã€‚<br>
+
+ãƒ’ãƒ³ãƒˆï¼šGNUPLOTã®xè»¸ã‚’æ™‚é–“è»¸ã«å–ã‚Šã€åŒyè»¸ã‚’X(t)ã€zè»¸ã‚’Y(t)ã®è¡¨ç¤ºã«å‰²ã‚Šå½“ã¦ã‚ˆã€‚<br>
+
+<!--<font color="maroon"><b>Applied question :</b> Display the time evolution of (X(t),Y(t)) on xy-plane, utilizing 3-dim. plot.<br>
+
+Hint: Take x-axis of GNUPLOT as time axis, y-axis as X(t), and z-axis as Y(t).</font>--><p>
+
+
+
+  <hr>
+
+  <h3>TIPS</h3>
+
+  <p>ãƒã‚¦ã‚¹å·¦ãƒœã‚¿ãƒ³ã§ãƒ‰ãƒ©ãƒƒã‚°ã—ã¦ã‚‚è¦–ç‚¹ã‚’å¤‰ãˆã‚‰ã‚Œã‚‹ï¼<br>
+
+    Ctrl ã‚’æŠ¼ã—ãªãŒã‚‰å›è»¢ã•ã›ã‚‹ã¨ï¼ŒQuick Draw(è»¸ã®ã¿ãŒè¡¨ç¤ºã•ã‚Œã‚‹) ãƒ¢ãƒ¼ãƒ‰ã«ãªã‚‹ï¼</p>
+
+  <p>ä¸­ãƒœã‚¿ãƒ³ã®ç¸¦ãƒ‰ãƒ©ãƒƒã‚°ã§zè»¸æ‹¡å¤§ç¸®å°ï¼Œæ¨ªãƒ‰ãƒ©ãƒƒã‚°ã§ã‚°ãƒ©ãƒ•å…¨ä½“æ‹¡å¤§ç¸®å°ï¼<br>
+
+    ï¼ˆ3ãƒœã‚¿ãƒ³ã®ãƒã‚¦ã‚¹ã®å ´åˆï¼ãªãã¦ã‚‚ã‚‚ã—ã‹ã—ãŸã‚‰å·¦å³åŒæ™‚æŠ¼ã—ã§ã‚¨ãƒŸãƒ¥ãƒ¬ãƒ¼ãƒˆã§ãã‚‹ã‹ã‚‚ï¼Ÿï¼‰
+
+  </p>
+
+  <hr>
+
+
+
+
+
+  <a href="HowtoGNUPLOT-15.html">å‰ã¸(prev.)</a>ãƒ»<a href="HowtoGNUPLOT-16.5.html">æ¬¡ã¸(next)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡ã¸(toc)</a>
+
+</body>
+
+</html>
+
+
+
+
