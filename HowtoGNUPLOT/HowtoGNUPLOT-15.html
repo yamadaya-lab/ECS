@@ -1,40 +1,86 @@
-<html>
-<title>How to use GNUPLOT: 12</title>
-<body>
-12. ‚æ‚èŒ©‚â‚·‚¢ƒOƒ‰ƒt‚É‚·‚é‚½‚ß‚Ì‹Z–@‚ğ‚¢‚­‚Â‚©Šw‚ñ‚Å‚¢‚±‚¤B<br>
-<!--<font color="maroon">Let us study some techniques to create more understadable graphs.</font>--><p>
-ŠÖ”ƒOƒ‰ƒt‚Ì•\¦‚Ìê‡‚Æ“¯‚¶‚æ‚¤‚ÉAcE‰¡²‚Ì•`‰æ”ÍˆÍ‚ğw’è‚·‚é‚±‚Æ‚ào—ˆ‚éB<br>
-—á‚Æ‚µ‚ÄA‚Q‚O‚©‚ç‚S‚O‚Ü‚Å‚ÌX(t)‚ğ’¼ü‚Å•\¦‚µ‚Ä‚İ‚æ‚¤B<br>
-<!--<font color="maroon">You can give the range of the ordinate and the abscissa like function graphs.</font>--><p>
-<tt>plot [20:40] "Lorenz.txt" using 1:2 with lines</tt><p>
-<img src="imgs/Lorenz-gp06.gif"><p>
-‚Ü‚½•ûŠáƒ‚[ƒh‚à“¯—l‚Éİ’èo—ˆ‚éB<br>
-<!--<font color="maroon">Graph paper mode is also available for data plot.</font>--><p>
-<tt>set grid</tt><br>
-<tt>replot</tt><p>
-<img src="imgs/Lorenz-gp07.gif"><p>
-ƒOƒ‰ƒt‚Ì‰¡²‚âc²‚ª‰½‚ğ•\‚·‚Ì‚©‚ğ•\¦o—ˆ‚é‚Æ•Ö—˜‚Å‚ ‚éB<br>
-Še²‚ÌŒ©o‚µ‚Íƒ‰ƒxƒ‹(label)‚ÆŒÄ‚Î‚êAŸ‚Ì‚æ‚¤‚É•Ğ•û‚Ì‚İA‚Ü‚½‚Í—¼•û“¯‚Éw’è‚Å‚«‚éB<br>
-<!--<font color="maroon">Labels for the ordinate and the abscissa are usefule.<br>
-You can define label strings for the ordinate and the abscissa respectively.</font>--><p>
-<tt>set xlabel "TIME"</tt><br>
-<tt>set ylabel "X(t)"</tt><br>
-<tt>replot</tt><p>
-<img src="imgs/Lorenz-gp08.gif"><p>
-ƒ‰ƒxƒ‹‚ğ‘‚«ŠÔˆá‚¦‚½ê‡E•ÏX‚µ‚½‚¢ê‡‚ÍA‚à‚¤ˆê“x<tt> set *label "..." </tt>‚ğÀs‚µ‚Ä‚©‚çA<br>
-replot‚·‚ê‚Î‚æ‚¢B•`‰æ‚É‚Í‚¢‚Â‚àÅV‚Ìİ’è‚ª”½‰f‚³‚ê‚éB<br>
-<!--<font color="maroon">In order to correct label strings, you only have to define again like <tt>set *label "..."</tt>.<br>
-And then <tt>replot</tt>. When graph changed, most recent settings are shown.</font>--><p>
-ˆê“xw’è‚µ‚½ƒ‰ƒxƒ‹‚ğÁ‚·‚É‚ÍAŸ‚Ì‚æ‚¤‚É‹ó•¶š—ñ‚ğ—^‚¦‚éB<br>
-<!--<font color="maroon">If you want to erase a label once you gave, type the following not like <tt> set noxlabel</tt>.</font>--><p>
-<tt>set xlabel ""</tt><br>
-<tt>replot</tt><p>
-<img src="imgs/Lorenz-gp09.gif"><p>
-‚±‚Ì‚Ù‚©<tt> set log y </tt>‚É‚æ‚è‘Î”–Ú·‚É•Ï‚¦‚Äƒvƒƒbƒg‚·‚é‚±‚Æ‚à‚à‚¿‚ë‚ñ‰Â”\‚¾‚ªA<br>
-‹³Şƒf[ƒ^‚Í³‚Ì’l‚ÉŒÀ‚ç‚ê‚Ä‚¢‚È‚¢‚Ì‚ÅA‚±‚±‚Å‚ÍÈ—ª‚·‚éB<br>
-<!--<font color="maroon">In addition, you can utilize logarithmic scale for data plot by <tt>set log y</tt>.<br>
-But we don't try it here since our teaching material contains negative values<br>
-so it cannot be plotted logarithmically.</font>--><p>
-<a href="HowtoGNUPLOT-14.html">‘O‚Ö(prev.)</a>E<a href="HowtoGNUPLOT-16.html">Ÿ‚Ö(next)</a>E<a href="Toc.html">–ÚŸ‚Ö(toc)</a>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>How to use GNUPLOT: 12</title>
+	</head>
+
+<body>
+
+12. ã‚ˆã‚Šè¦‹ã‚„ã™ã„ã‚°ãƒ©ãƒ•ã«ã™ã‚‹ãŸã‚ã®æŠ€æ³•ã‚’ã„ãã¤ã‹å­¦ã‚“ã§ã„ã“ã†ã€‚<br>
+
+<!--<font color="maroon">Let us study some techniques to create more understadable graphs.</font>--><p>
+
+é–¢æ•°ã‚°ãƒ©ãƒ•ã®è¡¨ç¤ºã®å ´åˆã¨åŒã˜ã‚ˆã†ã«ã€ç¸¦ãƒ»æ¨ªè»¸ã®æç”»ç¯„å›²ã‚’æŒ‡å®šã™ã‚‹ã“ã¨ã‚‚å‡ºæ¥ã‚‹ã€‚<br>
+
+ä¾‹ã¨ã—ã¦ã€æ™‚åˆ»ï¼’ï¼ã‹ã‚‰ï¼”ï¼ã¾ã§ã®X(t)ã‚’ç›´ç·šã§è¡¨ç¤ºã—ã¦ã¿ã‚ˆã†ã€‚<br>
+
+<!--<font color="maroon">You can give the range of the ordinate and the abscissa like function graphs.</font>--><p>
+
+<tt>plot [20:40] "Lorenz.txt" using 1:2 with lines</tt><p>
+
+<img src="imgs/Lorenz-gp06.gif"><p>
+
+ã¾ãŸæ–¹çœ¼ãƒ¢ãƒ¼ãƒ‰ã‚‚åŒæ§˜ã«è¨­å®šå‡ºæ¥ã‚‹ã€‚<br>
+
+<!--<font color="maroon">Graph paper mode is also available for data plot.</font>--><p>
+
+<tt>set grid</tt><br>
+
+<tt>replot</tt><p>
+
+<img src="imgs/Lorenz-gp07.gif"><p>
+
+ã‚°ãƒ©ãƒ•ã®æ¨ªè»¸ã‚„ç¸¦è»¸ãŒä½•ã‚’è¡¨ã™ã®ã‹ã‚’è¡¨ç¤ºå‡ºæ¥ã‚‹ã¨ä¾¿åˆ©ã§ã‚ã‚‹ã€‚<br>
+
+å„è»¸ã®è¦‹å‡ºã—ã¯ãƒ©ãƒ™ãƒ«(label)ã¨å‘¼ã°ã‚Œã€æ¬¡ã®ã‚ˆã†ã«ç‰‡æ–¹ã®ã¿ã€ã¾ãŸã¯ä¸¡æ–¹åŒæ™‚ã«æŒ‡å®šã§ãã‚‹ã€‚<br>
+
+<!--<font color="maroon">Labels for the ordinate and the abscissa are usefule.<br>
+
+You can define label strings for the ordinate and the abscissa respectively.</font>--><p>
+
+<tt>set xlabel "TIME"</tt><br>
+
+<tt>set ylabel "X(t)"</tt><br>
+
+<tt>replot</tt><p>
+
+<img src="imgs/Lorenz-gp08.gif"><p>
+
+ãƒ©ãƒ™ãƒ«ã‚’æ›¸ãé–“é•ãˆãŸå ´åˆãƒ»å¤‰æ›´ã—ãŸã„å ´åˆã¯ã€ã‚‚ã†ä¸€åº¦<tt> set *label "..." </tt>ã‚’å®Ÿè¡Œã—ã¦ã‹ã‚‰ã€<br>
+
+replotã™ã‚Œã°ã‚ˆã„ã€‚æç”»æ™‚ã«ã¯ã„ã¤ã‚‚æœ€æ–°ã®è¨­å®šãŒåæ˜ ã•ã‚Œã‚‹ã€‚<br>
+
+<!--<font color="maroon">In order to correct label strings, you only have to define again like <tt>set *label "..."</tt>.<br>
+
+And then <tt>replot</tt>. When graph changed, most recent settings are shown.</font>--><p>
+
+ä¸€åº¦æŒ‡å®šã—ãŸãƒ©ãƒ™ãƒ«ã‚’æ¶ˆã™ã«ã¯ã€æ¬¡ã®ã‚ˆã†ã«ç©ºæ–‡å­—åˆ—ã‚’ä¸ãˆã‚‹ã€‚<br>
+
+<!--<font color="maroon">If you want to erase a label once you gave, type the following not like <tt> set noxlabel</tt>.</font>--><p>
+
+<tt>set xlabel ""</tt><br>
+
+<tt>replot</tt><p>
+
+<img src="imgs/Lorenz-gp09.gif"><p>
+
+ã“ã®ã»ã‹<tt> set log y </tt>ã«ã‚ˆã‚Šå¯¾æ•°ç›®ç››ã«å¤‰ãˆã¦ãƒ—ãƒ­ãƒƒãƒˆã™ã‚‹ã“ã¨ã‚‚ã‚‚ã¡ã‚ã‚“å¯èƒ½ã ãŒã€<br>
+
+æ•™æãƒ‡ãƒ¼ã‚¿ã¯æ­£ã®å€¤ã«é™ã‚‰ã‚Œã¦ã„ãªã„ã®ã§ã€ã“ã“ã§ã¯çœç•¥ã™ã‚‹ã€‚<br>
+
+<!--<font color="maroon">In addition, you can utilize logarithmic scale for data plot by <tt>set log y</tt>.<br>
+
+But we don't try it here since our teaching material contains negative values<br>
+
+so it cannot be plotted logarithmically.</font>--><p>
+
+<a href="HowtoGNUPLOT-14.html">å‰ã¸(prev.)</a>ãƒ»<a href="HowtoGNUPLOT-16.html">æ¬¡ã¸(next)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡ã¸(toc)</a>
+
+</body>
+
+</html>
+
+
