@@ -1,35 +1,75 @@
-<html>
-<title>How to use GNUPLOT: 16</title>
-<body>
-16. cE‰¡²‚Ì–Ú·‚ğ©—R‚ÉŠ„‚èU‚é•û–@‚ğƒ}ƒXƒ^[‚µ‚æ‚¤B<br>
-<!--<font color="maroon">Next let us study how to set up axes ticks.</font>--><p>
-‚±‚±‚Å‚Ì—á‘è‚ÉÅ‚àŠÈ’P‚ÈŸ‚ÌƒOƒ‰ƒt‚ğ—pˆÓ‚µ‚æ‚¤B<br>
-<!--<font color="maroon">To explain the way, here we will prepare a simple graph.</font>--><p>
-<tt>plot [0:10] x</tt><p>
-<img src="imgs/plot-02.gif"><p>
-‚±‚ÌƒfƒtƒHƒ‹ƒg‚Ì–Ú·İ’è‚É‚æ‚é‚Æ‰¡²‚Í‚Q‚²‚Æ‚É–Ú·‚ª‚ ‚éB<br>
-‚±‚ê‚ğx=3‚©‚ç7‚Ì”ÍˆÍ‚Ì‚İ‚É‚P‚²‚Æ‚É–Ú·‚ğ•\¦‚·‚é‚æ‚¤‚É•ÏX‚µ‚Ä‚İ‚æ‚¤B<br>
-<!--<font color="maroon">You can see ticks every two unit for the initial setting of the abscissa.<br>
-Let us modify the ticks setting in order to restrict them from 3 to 7 and in order that<br>
-their interval is one unit.</font>--><p>
-<tt>set xtics 3,1,7</tt><br>
-<tt>replot</tt><p>
-<img src="imgs/plot-22.gif"><p>
-‚±‚Ì‚æ‚¤‚Éset–½—ß‚Åxtics‚Ìƒ‚[ƒh‚ğw’è‚Å‚«‚éB<br>
-<!--<font color="maroon">You can set up ticks by <tt>set</tt> instruction.</font>--><p>
-<ul>
-<li>‚P‚Â–Ú‚Ì’l‚Í–Ú·‚ğ‘Å‚¿n‚ß‚éˆÊ’u‚ğw’è‚·‚é <!--<font color="maroon">Ticks are put from the point given by 1st argument.</font>--></li>
-<li>‚Q‚Â–Ú‚Ì’l‚Í–Ú·‚ÌŠÔŠu‚ğw’è‚·‚é <!--<font color="maroon">2nd argument gives the interval of ticks.</font>--></li>
-<li>‚R‚Â–Ú‚Ì’l‚Í–Ú·‚ğ‘Å‚¿I‚¦‚éˆÊ’u‚ğw’è‚·‚é <!--<font color="maroon">last argument gives the end point of ticks.</font>--></li>
-</ul>
-xtics ‚Ì‘ã‚í‚è‚É ytics ‚ğg‚¦‚Îc²‚Ì–Ú·‚à“¯—l‚Éİ’è‚Å‚«‚éB<br>
-‚Ü‚½–Ú·‚Ì‘Å‚¿n‚ß‚â‘Å‚¿I‚í‚è‚ÌˆÊ’u‚Í‰æ–Ê‚É•\¦‚³‚ê‚È‚¢‚Æ‚±‚ë‚ğw’è‚µ‚Ä‚à—Ç‚¢B<br>
-—á‚¦‚Îã‚Ì—á‚ÅA<tt>set xtics 0,3,20</tt> ‚Æw’è‚µ‚Ä‚àx=0‚©‚ç10‚Ü‚Å‚Ì”ÍˆÍ‚¾‚¯‚É–Ú·‚ª•\¦‚³‚ê‚éB<br>
-<!--<font color="maroon">You can modify ticks on the ordinate by <tt>set ytics</tt>.<br>
-Further, you can say the starting and end points out side the range of your graph.<br>
-For example, you can set as <tt>set xtics 0,3,20</tt>, and then you will see ticks are put from 0 to 10 only.</font>--><p>
-<a href="HowtoGNUPLOT-18.html">‘O‚Ö(prev.)</a>E<a href="HowtoGNUPLOT-20.html">Ÿ‚Ö(next)</a>E<a href="Toc.html">–ÚŸ‚Ö(toc)</a>
-</body>
-</html>
-
-
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>How to use GNUPLOT: 16</title>
+	</head>
+<body>
+
+16. ç¸¦ãƒ»æ¨ªè»¸ã®ç›®ç››ã‚’è‡ªç”±ã«å‰²ã‚ŠæŒ¯ã‚‹æ–¹æ³•ã‚’ãƒã‚¹ã‚¿ãƒ¼ã—ã‚ˆã†ã€‚<br>
+
+<!--<font color="maroon">Next let us study how to set up axes ticks.</font>--><p>
+
+ã“ã“ã§ã®ä¾‹é¡Œã«æœ€ã‚‚ç°¡å˜ãªæ¬¡ã®ã‚°ãƒ©ãƒ•ã‚’ç”¨æ„ã—ã‚ˆã†ã€‚<br>
+
+<!--<font color="maroon">To explain the way, here we will prepare a simple graph.</font>--><p>
+
+<tt>plot [0:10] x</tt><p>
+
+<img src="imgs/plot-02.gif"><p>
+
+ã“ã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ç›®ç››è¨­å®šã«ã‚ˆã‚‹ã¨æ¨ªè»¸ã¯ï¼’ã”ã¨ã«ç›®ç››ãŒã‚ã‚‹ã€‚<br>
+
+ã“ã‚Œã‚’x=3ã‹ã‚‰7ã®ç¯„å›²ã®ã¿ã«ï¼‘ã”ã¨ã«ç›®ç››ã‚’è¡¨ç¤ºã™ã‚‹ã‚ˆã†ã«å¤‰æ›´ã—ã¦ã¿ã‚ˆã†ã€‚<br>
+
+<!--<font color="maroon">You can see ticks every two unit for the initial setting of the abscissa.<br>
+
+Let us modify the ticks setting in order to restrict them from 3 to 7 and in order that<br>
+
+their interval is one unit.</font>--><p>
+
+<tt>set xtics 3,1,7</tt><br>
+
+<tt>replot</tt><p>
+
+<img src="imgs/plot-22.gif"><p>
+
+ã“ã®ã‚ˆã†ã«setå‘½ä»¤ã§xticsã®ãƒ¢ãƒ¼ãƒ‰ã‚’æŒ‡å®šã§ãã‚‹ã€‚<br>
+
+<!--<font color="maroon">You can set up ticks by <tt>set</tt> instruction.</font>--><p>
+
+<ul>
+
+<li>ï¼‘ã¤ç›®ã®å€¤ã¯ç›®ç››ã‚’æ‰“ã¡å§‹ã‚ã‚‹ä½ç½®ã‚’æŒ‡å®šã™ã‚‹ <!--<font color="maroon">Ticks are put from the point given by 1st argument.</font>--></li>
+
+<li>ï¼’ã¤ç›®ã®å€¤ã¯ç›®ç››ã®é–“éš”ã‚’æŒ‡å®šã™ã‚‹ <!--<font color="maroon">2nd argument gives the interval of ticks.</font>--></li>
+
+<li>ï¼“ã¤ç›®ã®å€¤ã¯ç›®ç››ã‚’æ‰“ã¡çµ‚ãˆã‚‹ä½ç½®ã‚’æŒ‡å®šã™ã‚‹ <!--<font color="maroon">last argument gives the end point of ticks.</font>--></li>
+
+</ul>
+
+xtics ã®ä»£ã‚ã‚Šã« ytics ã‚’ä½¿ãˆã°ç¸¦è»¸ã®ç›®ç››ã‚‚åŒæ§˜ã«è¨­å®šã§ãã‚‹ã€‚<br>
+
+ã¾ãŸç›®ç››ã®æ‰“ã¡å§‹ã‚ã‚„æ‰“ã¡çµ‚ã‚ã‚Šã®ä½ç½®ã¯ç”»é¢ã«è¡¨ç¤ºã•ã‚Œãªã„ã¨ã“ã‚ã‚’æŒ‡å®šã—ã¦ã‚‚è‰¯ã„ã€‚<br>
+
+ä¾‹ãˆã°ä¸Šã®ä¾‹ã§ã€<tt>set xtics 0,3,20</tt> ã¨æŒ‡å®šã—ã¦ã‚‚x=0ã‹ã‚‰10ã¾ã§ã®ç¯„å›²ã ã‘ã«ç›®ç››ãŒè¡¨ç¤ºã•ã‚Œã‚‹ã€‚<br>
+
+<!--<font color="maroon">You can modify ticks on the ordinate by <tt>set ytics</tt>.<br>
+
+Further, you can say the starting and end points out side the range of your graph.<br>
+
+For example, you can set as <tt>set xtics 0,3,20</tt>, and then you will see ticks are put from 0 to 10 only.</font>--><p>
+
+<a href="HowtoGNUPLOT-18.html">å‰ã¸(prev.)</a>ãƒ»<a href="HowtoGNUPLOT-20.html">æ¬¡ã¸(next)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡ã¸(toc)</a>
+
+</body>
+
+</html>
+
+
+
+
+
+
