@@ -1,42 +1,90 @@
-<html>
-<title>How to use GNUPLOT: 8</title>
-<body>
-8. ‚»‚Ì‚Ù‚©‰“™ŠÖ”‚ğCŒ¾Œê‚Æ“¯—l‚È‹L–@‚Å•`‰æo—ˆ‚éB<br>
-<!--<font color="maroon">Some other mathematical functions are also given by the same notations as C-langeage.</font>--><p>
-—á‚P <!--<font color="maroon">Example 1</font>-->F<tt> plot sin(x)</tt><p>
-<img src="imgs/plot-08.gif"><p>
-—á‚Q <!--<font color="maroon">Example 2</font>-->F<tt> plot [-1:1] exp(x)</tt><p>
-<img src="imgs/plot-09.gif"><p>
-<b>‰—p–â‘èF</b>Œ´“_’†SA”¼Œa1‚Ì‰~ü‚ğƒOƒ‰ƒt‚Æ‚µ‚Ä•`‚¢‚Ä‚İ‚æB<br>
-<b>ƒqƒ“ƒgF</b>•½•ûª‚Í<tt>sqrt(x)</tt>‚ÆŒ¾‚¤–½—ß‚ğg‚¤B<br>
-<!--<font color="maroon"><b>applied question:</b> Draw the circle of radius 1 whose center is at origin.<br>
-<b>Hint:</b> Instruction of square root is <tt>sqrt(x)</tt>.</font>--><p>
-
-‚Ù‚©‚É—˜—po—ˆ‚éŠÖ”‚Ìˆê——‚Í<tt> help functions </tt>‚Æ“ü—Í‚·‚é‚Æƒwƒ‹ƒvƒEƒBƒ“ƒhƒE‚ªŠJ‚¢‚Ä<br>
-ƒŠƒXƒg‚ª•\¦‚³‚ê‚éB•¨—EHŠw‚ÅXo‰ï‚¤ƒKƒ“ƒ}ŠÖ”‚âŒë·ŠÖ”‚È‚Ç‚à•`‰æ‰Â”\‚¾B<br>
-<!--<font color="maroon">You can show the list of available functions by typing <tt>help functions</tt> as help window.<br>
-Gamma function and error function are also available<br>
-which we sometimes need to calculate in technological and physical considerations.</font>--><p>
-<img src="imgs/plot-08a.gif"><p>
-ã‚Ì—á‚Å•`‚¢‚½sinŠÖ”i³Œ·ŠÖ”j‚Ì‚Æ‚±‚ë‚ğƒNƒŠƒbƒN‚·‚é‚ÆAŠÖ”‚ÌŒÄ‚Ño‚µ•û‚ÌÚ×‚ª•\¦‚³‚ê‚éB<br>
-<!--<font color="maroon">Click at sin in help window, you can see how to call this function in detail.</font>--><p>
-<img src="imgs/plot-08b.gif"><p>
-ˆø”‚Å‚ ‚éŠp“x‚Íuƒ‰ƒWƒAƒ“v‚Ü‚½‚Íu“x”v‚Ì‚Ç‚¿‚ç‚à—˜—p‚Å‚«‚é‚Æ‹L‚³‚ê‚Ä‚¢‚éB<br>
-‚Ç‚¿‚ç‚Ì•\‚µ•û‚ğ—p‚¢‚é‚Ì‚©‚ÍA‚â‚Í‚èsetƒRƒ}ƒ“ƒh‚Åƒ‚[ƒhİ’è‚·‚éB<br>
-<!--<font color="maroon">You can use both radian and degree to give the angle arguments.<br>
-And which unit you use is chosen by set command.</font>--><p>
-<ul>
-<li><tt>set angles radian </tt>ˆÈŒã‚Ì“ü—Í‚Å‚ÍŠp“x’l‚ğƒ‰ƒWƒAƒ“‚Æ‰ğß‚·‚éB<font color="maroon">radian is available.</font></li>
-<li><tt>set angles degree </tt>ˆÈŒã‚Ì“ü—Í‚Å‚ÍŠp“x’l‚ğ“x”•\¦‚Æ‰ğß‚·‚éB<font color="maroon">degree is available.</font></li>
-</ul>
-<b>—ûK–â‘è‚PF</b>ƒ‰ƒWƒAƒ“ƒ‚[ƒh‚É‚µ‚Ä<tt> plot [0:2*pi] sin(x) </tt>‚ğÀs‚¹‚æB<br>
-<!--<font color="maroon"><b>Exersice 1:</b> Under radian mode, run <tt>plot [0:2*pi] sin(x)</tt></font>--><p>
-<b>¬‹ZF</b><tt> pi </tt>‚Í‰~ü—¦3.1415...‚Æ‚µ‚Äˆ—‚³‚ê‚éB‚±‚Ì—á‚Å‚Í<tt> 2*pi </tt>‚QƒÎ ‚¾B<br>
-<!--<font color="maroon"><b>simple trick:</b> <tt>pi</tt> means the circular constant 3.1415... In this example <tt>2*pi</tt> equals 2ƒÎ</font>--><p>
-<b>—ûK–â‘è‚QF</b>“x”ƒ‚[ƒh‚É‚µ‚Ä<tt> plot [0:360] sin(x) </tt>‚ğÀs‚¹‚æB<br>
-<!--<font color="maroon"><b>Exercise 2:</b> Under degree mode, run <tt>plot [0:360] sin(x)</tt></font>--><p>
-‚Ç‚¿‚ç‚à³Œ·ŠÖ”‚Ì‚¿‚å‚¤‚Ç‚PüŠú•ª‚ª•\¦‚³‚ê‚½‚©H<br>
-<!--<font color="maroon">Can you see just one period of sinusoidal function as the solutions of both exercises ?</font>--><p>
-<a href="HowtoGNUPLOT-10.html">‘O‚Ö(prev.)</a>E<a href="HowtoGNUPLOT-12.html">Ÿ‚Ö(next)</a>E<a href="Toc.html">–ÚŸ‚Ö(toc)</a>
-</body>
-</href>
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>How to use GNUPLOT: 8</title>
+	</head>
+
+<body>
+
+8. ãã®ã»ã‹åˆç­‰é–¢æ•°ã‚’Cè¨€èªã¨åŒæ§˜ãªè¨˜æ³•ã§æç”»å‡ºæ¥ã‚‹ã€‚<br>
+
+<!--<font color="maroon">Some other mathematical functions are also given by the same notations as C-langeage.</font>--><p>
+
+ä¾‹ï¼‘ <!--<font color="maroon">Example 1</font>-->ï¼š<tt> plot sin(x)</tt><p>
+
+<img src="imgs/plot-08.gif"><p>
+
+ä¾‹ï¼’ <!--<font color="maroon">Example 2</font>-->ï¼š<tt> plot [-1:1] exp(x)</tt><p>
+
+<img src="imgs/plot-09.gif"><p>
+
+<b>å¿œç”¨å•é¡Œï¼š</b>åŸç‚¹ä¸­å¿ƒã€åŠå¾„1ã®å††å‘¨ã‚’ã‚°ãƒ©ãƒ•ã¨ã—ã¦æã„ã¦ã¿ã‚ˆã€‚<br>
+
+<b>ãƒ’ãƒ³ãƒˆï¼š</b>å¹³æ–¹æ ¹ã¯<tt>sqrt(x)</tt>ã¨è¨€ã†å‘½ä»¤ã‚’ä½¿ã†ã€‚<br>
+
+<!--<font color="maroon"><b>applied question:</b> Draw the circle of radius 1 whose center is at origin.<br>
+
+<b>Hint:</b> Instruction of square root is <tt>sqrt(x)</tt>.</font>--><p>
+
+
+
+ã»ã‹ã«åˆ©ç”¨å‡ºæ¥ã‚‹é–¢æ•°ã®ä¸€è¦§ã¯<tt> help functions </tt>ã¨å…¥åŠ›ã™ã‚‹ã¨ãƒ˜ãƒ«ãƒ—ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãŒé–‹ã„ã¦<br>
+
+ãƒªã‚¹ãƒˆãŒè¡¨ç¤ºã•ã‚Œã‚‹ã€‚ç‰©ç†ãƒ»å·¥å­¦ã§æ™‚ã€…å‡ºä¼šã†ã‚¬ãƒ³ãƒé–¢æ•°ã‚„èª¤å·®é–¢æ•°ãªã©ã‚‚æç”»å¯èƒ½ã ã€‚<br>
+
+<!--<font color="maroon">You can show the list of available functions by typing <tt>help functions</tt> as help window.<br>
+
+Gamma function and error function are also available<br>
+
+which we sometimes need to calculate in technological and physical considerations.</font>--><p>
+
+<img src="imgs/plot-08a.gif"><p>
+
+ä¸Šã®ä¾‹ã§æã„ãŸsiné–¢æ•°ï¼ˆæ­£å¼¦é–¢æ•°ï¼‰ã®ã¨ã“ã‚ã‚’ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã¨ã€é–¢æ•°ã®å‘¼ã³å‡ºã—æ–¹ã®è©³ç´°ãŒè¡¨ç¤ºã•ã‚Œã‚‹ã€‚<br>
+
+<!--<font color="maroon">Click at sin in help window, you can see how to call this function in detail.</font>--><p>
+
+<img src="imgs/plot-08b.gif"><p>
+
+å¼•æ•°ã§ã‚ã‚‹è§’åº¦ã¯ã€Œãƒ©ã‚¸ã‚¢ãƒ³ã€ã¾ãŸã¯ã€Œåº¦æ•°ã€ã®ã©ã¡ã‚‰ã‚‚åˆ©ç”¨ã§ãã‚‹ã¨è¨˜ã•ã‚Œã¦ã„ã‚‹ã€‚<br>
+
+ã©ã¡ã‚‰ã®è¡¨ã—æ–¹ã‚’ç”¨ã„ã‚‹ã®ã‹ã¯ã€ã‚„ã¯ã‚Šsetã‚³ãƒãƒ³ãƒ‰ã§ãƒ¢ãƒ¼ãƒ‰è¨­å®šã™ã‚‹ã€‚<br>
+
+<!--<font color="maroon">You can use both radian and degree to give the angle arguments.<br>
+
+And which unit you use is chosen by set command.</font>--><p>
+
+<ul>
+
+<li><tt>set angles radian </tt>ä»¥å¾Œã®å…¥åŠ›ã§ã¯è§’åº¦å€¤ã‚’ãƒ©ã‚¸ã‚¢ãƒ³ã¨è§£é‡ˆã™ã‚‹ã€‚<font color="maroon">radian is available.</font></li>
+
+<li><tt>set angles degree </tt>ä»¥å¾Œã®å…¥åŠ›ã§ã¯è§’åº¦å€¤ã‚’åº¦æ•°è¡¨ç¤ºã¨è§£é‡ˆã™ã‚‹ã€‚<font color="maroon">degree is available.</font></li>
+
+</ul>
+
+<b>ç·´ç¿’å•é¡Œï¼‘ï¼š</b>ãƒ©ã‚¸ã‚¢ãƒ³ãƒ¢ãƒ¼ãƒ‰ã«ã—ã¦<tt> plot [0:2*pi] sin(x) </tt>ã‚’å®Ÿè¡Œã›ã‚ˆã€‚<br>
+
+<!--<font color="maroon"><b>Exersice 1:</b> Under radian mode, run <tt>plot [0:2*pi] sin(x)</tt></font>--><p>
+
+<b>å°æŠ€ï¼š</b><tt> pi </tt>ã¯å††å‘¨ç‡3.1415...ã¨ã—ã¦å‡¦ç†ã•ã‚Œã‚‹ã€‚ã“ã®ä¾‹ã§ã¯<tt> 2*pi </tt>ï¼ï¼’Ï€ ã ã€‚<br>
+
+<!--<font color="maroon"><b>simple trick:</b> <tt>pi</tt> means the circular constant 3.1415... In this example <tt>2*pi</tt> equals 2Ï€</font>--><p>
+
+<b>ç·´ç¿’å•é¡Œï¼’ï¼š</b>åº¦æ•°ãƒ¢ãƒ¼ãƒ‰ã«ã—ã¦<tt> plot [0:360] sin(x) </tt>ã‚’å®Ÿè¡Œã›ã‚ˆã€‚<br>
+
+<!--<font color="maroon"><b>Exercise 2:</b> Under degree mode, run <tt>plot [0:360] sin(x)</tt></font>--><p>
+
+ã©ã¡ã‚‰ã‚‚æ­£å¼¦é–¢æ•°ã®ã¡ã‚‡ã†ã©ï¼‘å‘¨æœŸåˆ†ãŒè¡¨ç¤ºã•ã‚ŒãŸã‹ï¼Ÿ<br>
+
+<!--<font color="maroon">Can you see just one period of sinusoidal function as the solutions of both exercises ?</font>--><p>
+
+<a href="HowtoGNUPLOT-10.html">å‰ã¸(prev.)</a>ãƒ»<a href="HowtoGNUPLOT-12.html">æ¬¡ã¸(next)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡ã¸(toc)</a>
+
+</body>
+
+</href>
+
+
