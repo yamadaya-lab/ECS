@@ -1,50 +1,106 @@
-<html>
-<title>How to use GNUPLOT: 14</title>
-<body>
-<b>ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ‚Ì•ÏX•û–@</b><br>
-<!--<font color="maroon"><b>How to change the current directory.</b></font>-->
-<hr><p>
-‹N“®‚ÉGNUPLOT‚ªƒf[ƒ^ƒtƒ@ƒCƒ‹‚ğQÆ‚Å‚«‚éƒfƒBƒŒƒNƒgƒŠ‚ÍƒVƒ‡[ƒgƒJƒbƒg‚Ì¢ì‹ÆƒtƒHƒ‹ƒ_v‚Éİ’è‚µ‚½êŠ‚Å‚ ‚éB<br>
-Ÿ‚Ì—á‚Å‚Í<tt> C:\home\ECS1 </tt>‚Æ‚È‚éB<br>
-<!--<font color="maroon">The initial current directory is give as the working directory in the property window of GNUPLOT icon.<br>
-In the following example, <tt>C:\home\ECS1</tt> is the initial current directory when you run GNUPLOT.</font>--><p>
-<img src="imgs/dir-1.gif"><p>
-
-ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ(=ƒpƒXw’è–³‚µ‚Åƒtƒ@ƒCƒ‹‚ğQÆo—ˆ‚éƒtƒHƒ‹ƒ_)‚ğŠm”F‚·‚é‚É‚Í<tt> pwd </tt>‚Æ‚·‚éB<br>
-<!--<font color="maroon"><tt>pwd</tt> command without any arguments shows where the current directory is.</font>--><p>
-<img src="imgs/dir-2.gif"><p>
-‚±‚Ì—á‚Å‚Í<tt>C:\home\ECS1</tt>‚Æ•\¦‚³‚êA‹N“®‚ÍŠm‚©‚É¢ì‹ÆƒtƒHƒ‹ƒ_v—“‚Ìw’è’Ê‚è‚Å‚ ‚éB<br>
-<!--<font color="maroon">The above example shows the current directory is <tt>C:\home\ECS1</tt>, which is certainly given as working directory.</font>--><p>
-
-‚±‚Ìó‘Ô‚ÅA—á‚¦‚Î<tt>C:\home\ECS1\1st</tt>“à‚É‚ ‚éƒf[ƒ^ƒtƒ@ƒCƒ‹<tt>Lorenz.txt</tt>‚ÌƒOƒ‰ƒt‚ğ•`‚±‚¤‚Æ‚µ‚Ä‚à<br>
-Ÿ‚Ì‚æ‚¤‚ÉƒpƒX‚ğw’è‚µ‚È‚¯‚ê‚Îƒtƒ@ƒCƒ‹‚ğ“Ç‚Ş‚±‚Æ‚Í‚Å‚«‚È‚¢B<br>
-<!--<font color="maroon">In order to plot the data file <tt>Lorenz.txt</tt> which is in <tt>C:\home\ECS1\1st</tt>,<br>
-you have to write the path to that data file, since that is not in the current directory.</font>--><p>
-<img src="imgs/dir-3.gif"><p>
-‚±‚Ì—á‚Å‚Í1‰ñ–Ú‚ÌƒpƒXw’è‚Ì‚È‚¢<tt>splot</tt>‚ÍƒGƒ‰[‚Æ‚È‚èA2‰ñ–Ú‚Ì<tt>splot</tt>‚Å³‚µ‚­•`‰æ‚³‚ê‚éB<br>
-<b>’ˆÓF</b>ƒfƒBƒŒƒNƒgƒŠ–¼‚Ì‹æØ‚è‚É‚ÍA‰~ƒ}[ƒN<tt> \ </tt>‚Å‚Í‚È‚­ƒXƒ‰ƒbƒVƒ…<tt> / </tt>‚ğ—p‚¢‚é‚±‚ÆB<br>
-<!--<font color="maroon">1st example of <tt>splot</tt> without path fails, and 2nd one plots the graph correctly.</br>
-<b>Note:</b> You need to use <tt>/</tt>, not yen symbol <tt>\</tt>, as a separator for directory notation.</font>--><p>
-
-Ÿ‚Ì—á‚Ì‚æ‚¤‚ÉAƒpƒXw’è‚É‚Íâ‘ÎƒpƒX(=ƒhƒ‰ƒCƒu–¼‚©‚çn‚ß‚Ä‘S‚Ä‹Lq‚·‚é)‚à
-‘Š‘ÎƒpƒX(=ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ‚©‚çŒ©‚½‘Š‘ÎˆÊ’u‚ğ‹Lq‚·‚é)‚à—˜—p‚Å‚«‚éB<br>
-<!--<font color="maroon">You can describe the location of data file by either absolute path or relative path notations.</font>--><p> 
-<img src="imgs/dir-4.gif"><p>
-
-<tt>C:\home\ECS1</tt>“à‚É‚ ‚éƒTƒuƒfƒBƒŒƒNƒgƒŠ(ƒtƒHƒ‹ƒ_)<tt>1st</tt>‚ÉƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ‚ğˆÚ“®‚³‚¹‚é‚É‚Í<tt> cd </tt>ƒRƒ}ƒ“ƒh‚ğg‚¤B<br>
-<!--<font color="maroon">You can move current directory to <tt>1st</tt> in <tt>C:\home\ECS1</tt> by <tt>cd</tt> command.</font>--><p>
-<tt>cd "1st"</tt><br>
-<tt>cd "C:/home/ECS1/1st"</tt><p>
-‘Š‘ÎƒpƒXw’è(ã)Eâ‘ÎƒpƒXw’è(‰º)‚Ì‚Ç‚¿‚ç‚Å‚à‚æ‚¢Bˆê‚Âã‚ÌƒfƒBƒŒƒNƒgƒŠ‚Ö‚Í‘Š‘ÎƒpƒX‹L–@‚Å‚ ‚é <tt>".."</tt> ‚ğg‚¤B<br>
-<b>’ˆÓF</b>ƒ_ƒuƒ‹ƒNƒH[ƒeƒVƒ‡ƒ“‚ÅƒpƒX–¼‚ğŠ‡‚é‚±‚ÆB<br>
-<!--<font color="maroon">Both relative and absolute path notations are available.
-To move the current directory into the above one, you can use <tt>".."</tt> symbol as relative path notation.<br>
-<b>Note:</b> double quotation symbol is necessary at the head and the end of path name.</font>--><p>
-
-Ÿ‚Ì—á‚Íâ‘ÎƒpƒXw’è‚ÅƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ‚ğˆÚ“®‚µ‚ÄA<tt>pwd</tt> ƒRƒ}ƒ“ƒh‚ÅˆÚ“®‚ğŠm”F‚µ‚½‚Æ‚±‚ëB<br>
-<!--<font color="maroon">In the following, the current directory is changed in accordance with the given absolute path, and then <tt>pwd</tt> shows the changed state.</font>--><p>
-<img src="imgs/dir-5.gif"><p>
-
-<a href="HowtoGNUPLOT-22.html">‘O‚Ö(prev.)</a>E<a href="Toc.html">–ÚŸ‚Ö(toc)</a>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+    <title>How to use GNUPLOT: 14</title>
+	</head>
+
+<body>
+
+<b>ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®å¤‰æ›´æ–¹æ³•</b><br>
+
+<!--<font color="maroon"><b>How to change the current directory.</b></font>-->
+
+<hr><p>
+
+èµ·å‹•æ™‚ã«GNUPLOTãŒãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‚ç…§ã§ãã‚‹ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¯ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã®ï½¢ä½œæ¥­ãƒ•ã‚©ãƒ«ãƒ€ã€ã«è¨­å®šã—ãŸå ´æ‰€ã§ã‚ã‚‹ã€‚<br>
+
+æ¬¡ã®ä¾‹ã§ã¯<tt> C:\home\ECS1 </tt>ã¨ãªã‚‹ã€‚<br>
+
+<!--<font color="maroon">The initial current directory is give as the working directory in the property window of GNUPLOT icon.<br>
+
+In the following example, <tt>C:\home\ECS1</tt> is the initial current directory when you run GNUPLOT.</font>--><p>
+
+<img src="imgs/dir-1.gif"><p>
+
+
+
+ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª(=ãƒ‘ã‚¹æŒ‡å®šç„¡ã—ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‚ç…§å‡ºæ¥ã‚‹ãƒ•ã‚©ãƒ«ãƒ€)ã‚’ç¢ºèªã™ã‚‹ã«ã¯<tt> pwd </tt>ã¨ã™ã‚‹ã€‚<br>
+
+<!--<font color="maroon"><tt>pwd</tt> command without any arguments shows where the current directory is.</font>--><p>
+
+<img src="imgs/dir-2.gif"><p>
+
+ã“ã®ä¾‹ã§ã¯<tt>C:\home\ECS1</tt>ã¨è¡¨ç¤ºã•ã‚Œã€èµ·å‹•æ™‚ã¯ç¢ºã‹ã«ï½¢ä½œæ¥­ãƒ•ã‚©ãƒ«ãƒ€ã€æ¬„ã®æŒ‡å®šé€šã‚Šã§ã‚ã‚‹ã€‚<br>
+
+<!--<font color="maroon">The above example shows the current directory is <tt>C:\home\ECS1</tt>, which is certainly given as working directory.</font>--><p>
+
+
+
+ã“ã®çŠ¶æ…‹ã§ã€ä¾‹ãˆã°<tt>C:\home\ECS1\1st</tt>å†…ã«ã‚ã‚‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«<tt>Lorenz.txt</tt>ã®ã‚°ãƒ©ãƒ•ã‚’æã“ã†ã¨ã—ã¦ã‚‚<br>
+
+æ¬¡ã®ã‚ˆã†ã«ãƒ‘ã‚¹ã‚’æŒ‡å®šã—ãªã‘ã‚Œã°ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã‚€ã“ã¨ã¯ã§ããªã„ã€‚<br>
+
+<!--<font color="maroon">In order to plot the data file <tt>Lorenz.txt</tt> which is in <tt>C:\home\ECS1\1st</tt>,<br>
+
+you have to write the path to that data file, since that is not in the current directory.</font>--><p>
+
+<img src="imgs/dir-3.gif"><p>
+
+ã“ã®ä¾‹ã§ã¯1å›ç›®ã®ãƒ‘ã‚¹æŒ‡å®šã®ãªã„<tt>splot</tt>ã¯ã‚¨ãƒ©ãƒ¼ã¨ãªã‚Šã€2å›ç›®ã®<tt>splot</tt>ã§æ­£ã—ãæç”»ã•ã‚Œã‚‹ã€‚<br>
+
+<b>æ³¨æ„ï¼š</b>ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªåã®åŒºåˆ‡ã‚Šã«ã¯ã€å††ãƒãƒ¼ã‚¯<tt> \ </tt>ã§ã¯ãªãã‚¹ãƒ©ãƒƒã‚·ãƒ¥<tt> / </tt>ã‚’ç”¨ã„ã‚‹ã“ã¨ã€‚<br>
+
+<!--<font color="maroon">1st example of <tt>splot</tt> without path fails, and 2nd one plots the graph correctly.</br>
+
+<b>Note:</b> You need to use <tt>/</tt>, not yen symbol <tt>\</tt>, as a separator for directory notation.</font>--><p>
+
+
+
+æ¬¡ã®ä¾‹ã®ã‚ˆã†ã«ã€ãƒ‘ã‚¹æŒ‡å®šã«ã¯çµ¶å¯¾ãƒ‘ã‚¹(=ãƒ‰ãƒ©ã‚¤ãƒ–åã‹ã‚‰å§‹ã‚ã¦å…¨ã¦è¨˜è¿°ã™ã‚‹)ã‚‚
+
+ç›¸å¯¾ãƒ‘ã‚¹(=ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‹ã‚‰è¦‹ãŸç›¸å¯¾ä½ç½®ã‚’è¨˜è¿°ã™ã‚‹)ã‚‚åˆ©ç”¨ã§ãã‚‹ã€‚<br>
+
+<!--<font color="maroon">You can describe the location of data file by either absolute path or relative path notations.</font>--><p> 
+
+<img src="imgs/dir-4.gif"><p>
+
+
+
+<tt>C:\home\ECS1</tt>å†…ã«ã‚ã‚‹ã‚µãƒ–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª(ãƒ•ã‚©ãƒ«ãƒ€)<tt>1st</tt>ã«ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ç§»å‹•ã•ã›ã‚‹ã«ã¯<tt> cd </tt>ã‚³ãƒãƒ³ãƒ‰ã‚’ä½¿ã†ã€‚<br>
+
+<!--<font color="maroon">You can move current directory to <tt>1st</tt> in <tt>C:\home\ECS1</tt> by <tt>cd</tt> command.</font>--><p>
+
+<tt>cd "1st"</tt><br>
+
+<tt>cd "C:/home/ECS1/1st"</tt><p>
+
+ç›¸å¯¾ãƒ‘ã‚¹æŒ‡å®š(ä¸Š)ãƒ»çµ¶å¯¾ãƒ‘ã‚¹æŒ‡å®š(ä¸‹)ã®ã©ã¡ã‚‰ã§ã‚‚ã‚ˆã„ã€‚ä¸€ã¤ä¸Šã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¸ã¯ç›¸å¯¾ãƒ‘ã‚¹è¨˜æ³•ã§ã‚ã‚‹ <tt>".."</tt> ã‚’ä½¿ã†ã€‚<br>
+
+<b>æ³¨æ„ï¼š</b>ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ã‚·ãƒ§ãƒ³ã§ãƒ‘ã‚¹åã‚’æ‹¬ã‚‹ã“ã¨ã€‚<br>
+
+<!--<font color="maroon">Both relative and absolute path notations are available.
+
+To move the current directory into the above one, you can use <tt>".."</tt> symbol as relative path notation.<br>
+
+<b>Note:</b> double quotation symbol is necessary at the head and the end of path name.</font>--><p>
+
+
+
+æ¬¡ã®ä¾‹ã¯çµ¶å¯¾ãƒ‘ã‚¹æŒ‡å®šã§ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ç§»å‹•ã—ã¦ã€<tt>pwd</tt> ã‚³ãƒãƒ³ãƒ‰ã§ç§»å‹•ã‚’ç¢ºèªã—ãŸã¨ã“ã‚ã€‚<br>
+
+<!--<font color="maroon">In the following, the current directory is changed in accordance with the given absolute path, and then <tt>pwd</tt> shows the changed state.</font>--><p>
+
+<img src="imgs/dir-5.gif"><p>
+
+
+
+<a href="HowtoGNUPLOT-22.html">å‰ã¸(prev.)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡ã¸(toc)</a>
+
+</body>
+
+</html>
+
+
