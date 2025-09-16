@@ -1,2 +1,0 @@
-# ECS
-Website for exercise
