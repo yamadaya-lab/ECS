@@ -1,44 +1,94 @@
-<html>
-<title>How to use GNUPLOT 13.5</title>
-<body>
-13.5 splot‚ğ—p‚¢‚Ä‹È–Êi•½–Êj z=f(x,y) ‚ğ•`‚­‚±‚Æ‚ªo—ˆ‚éB<br>
-<!--<font color="maroon">Surface plot is available by <tt>splot</tt>.</font>--><br>
-—áF•½–Ê z=2x+3y ‚ğ•`‚­B<br>
-<!--<font color="maroon">Example: display the plane z=2x+3y.</font>--><br>
-<tt>splot 2*x+3*y</tt><p>
-<img src="imgs/plot-16.5a.gif"><p>
-
-‚±‚Ì•½–Ê‚Æ z=0 ‚Æ‚Ì‹¤’Ê•”•ªi’¼üj‚ğ’²‚×‚æ‚¤B<br>
-<!--<font color="maroon">Let us observe the intersection (line) of the above plane and z=0.</font>--><br>
-<tt>splot 2*x+3*y,0</tt><br>
-<img src="imgs/plot-16.5b.gif"><p>
-
-‚±‚Ì‚Ü‚Ü‚Å‚Í•½–Ê‚ª“§‚¯‚Ä•ª‚©‚è‚É‚­‚¢B‰Aüˆ—‚ğ{‚µ‚Ä‚İ‚éB<br>
-<!--<font color="maroon">The following command enables hidden line removal.</font>--><br>
-<tt>set hidden3d</tt><br>
-<tt>replot</tt><p>
-<img src="imgs/plot-16.5c.gif"><p>
-
-GNUPLOT‚ªZo‚µ‚Ä‚¢‚é‚Ì‚ÍŠiq“_‚Ì‚İ‚Å‚ ‚éBŠiq“_‚Ì–§“x‚ğã‚°‚Ä‚İ‚éB<br>
-<!--<font color="maroon">You can increase density of grid point for surface plot.</font>--><br>
-<tt>show isosamples</tt><br>
-ƒfƒtƒHƒ‹ƒg’l‚Í x²Ey²‹¤‚É10“_‚Å‚ ‚éB‚±‚ê‚ğ”{‚É‚·‚éB<br>
-<!--<font color="maroon">Default number of grid points is 10x10. Here we double this.</font>--><br>
-<tt>set isosamples 20,20</tt><br>
-<tt>replot</tt><p>
-<img src="imgs/plot-16.5d.gif"><p>
-
-‹È–Ê‚Ì—á‚Æ‚µ‚ÄŒ´“_‚©‚ç‚Ì‹——£‚ğ•\‚· z=f(x,y)=ã(x^2+y^2) ‚ğ•`‚¢‚Ä‚İ‚éB<br>
-<!--<font color="maroon">Another example; display the distance function from the origin.</font>--><br>
-<tt>splot sqrt(x*x+y*y)</tt><p>
-<img src="imgs/plot-16.5e.gif"><p>
-
-<b>‰—p–â‘èF</b>Œ¸ŠU“® x(t)=exp(-at)sin(t) (a>0) ‚ÌU“®‚Ì—lq‚ªƒpƒ‰ƒ[ƒ^ a ‚Ì’l‚É‚æ‚Á‚Ä<br>
-‚Ç‚Ì‚æ‚¤‚É•Ï‰»‚·‚é‚©‹È–Ê•\¦‚ğ—p‚¢‚ÄŠÏ@‚¹‚æB<br>
-<!--<font color="maroon"><b>applied question:</b> observe how the damped oscillation x(t)=exp(-at)sin(t) (a>0) varies depending on parameter a.</font-->><br>
-ƒqƒ“ƒgF t ‚ğGNUPLOT‚Ì x²‚ÉAƒpƒ‰ƒ[ƒ^ a ‚ğ y²‚Æ‚µ‚Ä‹È–Ê•\¦‚·‚éB<br>
-<!--<font color="maroon">Hint: assign time to x-axis of GNUPLOT and parameter a to y-axis.</font>--><p>
-
-<a href="HowtoGNUPLOT-16.html">‘O‚Ö(prev.)</a>E<a href="HowtoGNUPLOT-17.html">Ÿ‚Ö(next)</a>E<a href="Toc.html">–ÚŸ(toc)</a>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>How to use GNUPLOT: 13.5</title>
+	</head>
+
+<body>
+
+13.5 splotã‚’ç”¨ã„ã¦æ›²é¢ï¼ˆå¹³é¢ï¼‰ z=f(x,y) ã‚’æãã“ã¨ãŒå‡ºæ¥ã‚‹ã€‚<br>
+
+<!--<font color="maroon">Surface plot is available by <tt>splot</tt>.</font>--><br>
+
+ä¾‹ï¼šå¹³é¢ z=2x+3y ã‚’æãã€‚<br>
+
+<!--<font color="maroon">Example: display the plane z=2x+3y.</font>--><br>
+
+<tt>splot 2*x+3*y</tt><p>
+
+<img src="imgs/plot-16.5a.gif"><p>
+
+
+
+ã“ã®å¹³é¢ã¨ z=0 ã¨ã®å…±é€šéƒ¨åˆ†ï¼ˆç›´ç·šï¼‰ã‚’èª¿ã¹ã‚ˆã†ã€‚<br>
+
+<!--<font color="maroon">Let us observe the intersection (line) of the above plane and z=0.</font>--><br>
+
+<tt>splot 2*x+3*y,0</tt><br>
+
+<img src="imgs/plot-16.5b.gif"><p>
+
+
+
+ã“ã®ã¾ã¾ã§ã¯å¹³é¢ãŒé€ã‘ã¦åˆ†ã‹ã‚Šã«ãã„ã€‚é™°ç·šå‡¦ç†ã‚’æ–½ã—ã¦ã¿ã‚‹ã€‚<br>
+
+<!--<font color="maroon">The following command enables hidden line removal.</font>--><br>
+
+<tt>set hidden3d</tt><br>
+
+<tt>replot</tt><p>
+
+<img src="imgs/plot-16.5c.gif"><p>
+
+
+
+GNUPLOTãŒç®—å‡ºã—ã¦ã„ã‚‹ã®ã¯æ ¼å­ç‚¹ã®ã¿ã§ã‚ã‚‹ã€‚æ ¼å­ç‚¹ã®å¯†åº¦ã‚’ä¸Šã’ã¦ã¿ã‚‹ã€‚<br>
+
+<!--<font color="maroon">You can increase density of grid point for surface plot.</font>--><br>
+
+<tt>show isosamples</tt><br>
+
+ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ã¯ xè»¸ãƒ»yè»¸å…±ã«10ç‚¹ã§ã‚ã‚‹ã€‚ã“ã‚Œã‚’å€ã«ã™ã‚‹ã€‚<br>
+
+<!--<font color="maroon">Default number of grid points is 10x10. Here we double this.</font>--><br>
+
+<tt>set isosamples 20,20</tt><br>
+
+<tt>replot</tt><p>
+
+<img src="imgs/plot-16.5d.gif"><p>
+
+
+
+æ›²é¢ã®ä¾‹ã¨ã—ã¦åŸç‚¹ã‹ã‚‰ã®è·é›¢ã‚’è¡¨ã™ z=f(x,y)=âˆš(x^2+y^2) ã‚’æã„ã¦ã¿ã‚‹ã€‚<br>
+
+<!--<font color="maroon">Another example; display the distance function from the origin.</font>--><br>
+
+<tt>splot sqrt(x*x+y*y)</tt><p>
+
+<img src="imgs/plot-16.5e.gif"><p>
+
+
+
+<b>å¿œç”¨å•é¡Œï¼š</b>æ¸›è¡°æŒ¯å‹• x(t)=exp(-at)sin(t) (a>0) ã®æŒ¯å‹•ã®æ§˜å­ãŒãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ a ã®å€¤ã«ã‚ˆã£ã¦<br>
+
+ã©ã®ã‚ˆã†ã«å¤‰åŒ–ã™ã‚‹ã‹æ›²é¢è¡¨ç¤ºã‚’ç”¨ã„ã¦è¦³å¯Ÿã›ã‚ˆã€‚<br>
+
+<!--<font color="maroon"><b>applied question:</b> observe how the damped oscillation x(t)=exp(-at)sin(t) (a>0) varies depending on parameter a.</font-->><br>
+
+ãƒ’ãƒ³ãƒˆï¼šæ™‚åˆ» t ã‚’GNUPLOTã® xè»¸ã«ã€ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ a ã‚’ yè»¸ã¨ã—ã¦æ›²é¢è¡¨ç¤ºã™ã‚‹ã€‚<br>
+
+<!--<font color="maroon">Hint: assign time to x-axis of GNUPLOT and parameter a to y-axis.</font>--><p>
+
+
+
+<a href="HowtoGNUPLOT-16.html">å‰ã¸(prev.)</a>ãƒ»<a href="HowtoGNUPLOT-17.html">æ¬¡ã¸(next)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡(toc)</a>
+
+</body>
+
+</html>
+
+
