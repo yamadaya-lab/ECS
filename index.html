@@ -2,7 +2,7 @@
 
 <html lang="ja">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	  <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="tips/ecs1.css">
     <style type="text/css">
       <!--
@@ -52,44 +52,44 @@
 	}
 	-->
     </style>
-    <title>C �� TEST</title>
+    <title>C 環境 TEST</title>
   </head>
   <body>
 
-    <h1>���G�n�Ȋw���K�@C �� TEST</h1>
+    <h1>複雑系科学演習　C 環境 TEST</h1>
 
-    <h2>���K���̊m�F</h2>
+    <h2>演習環境の確認</h2>
     <hr>
 
-    �܂��͂��߂ɁA�{���K�Ŏg�p����C�����OpenOffice�̊��������Ă��邩�̊m�F���s���܂��B<br>
-    LINUX��ł̍�Ƃ�z�肵�Đ������܂��B�菇�͈ȉ��̒ʂ�ł��B
+    まずはじめに、本演習で使用するC言語やOpenOfficeの環境が整っているかの確認を行います。<br>
+    LINUX上での作業を想定して説明します。手順は以下の通りです。
 
     <ol>
-      <li>�v���O�����̍쐬</li>
-      <li>�R���p�C��</li>
-      <li>���s�E���ʂ̃t�@�C���ւ̏����o��</li>
-      <li>���ʂ̃O���t��</li>
-      <li>�l�@�̂��߂̃O���t�쐬</li>
-      <li>���|�[�g�쐬</li>
-      <li>���</li>
-      <li>��o</li>
+      <li>プログラムの作成</li>
+      <li>コンパイル</li>
+      <li>実行・結果のファイルへの書き出し</li>
+      <li>結果のグラフ化</li>
+      <li>考察のためのグラフ作成</li>
+      <li>レポート作成</li>
+      <li>印刷</li>
+      <li>提出</li>
     </ol>
 
-    �����̍�Ƃ̑O�ɁA�{���K�Ŏg�p����f�B���N�g�����e�����߂Ă����Ă��������B<br>
-    �i�Ⴆ�΁A�e���̃z�[���f�B���N�g�� [�ʏ� /home/"���O�C����"�B�R�}���h�v�����v�g�ł�default�ł����ɂ���] �̉��� <SPAN>2023/ECS</SPAN>
-���쐬����Ȃǁj
+    これらの作業の前に、本演習で使用するディレクトリを各自決めておいてください。<br>
+    （例えば、各自のホームディレクトリ [通常 /home/"ログイン名"。コマンドプロンプトではdefaultでここにいる] の下に <SPAN>2023/ECS</SPAN>
+を作成するなど）
 
     <hr>
 
-    <h3>1. �v���O�����̍쐬</h3>
+    <h3>1. プログラムの作成</h3>
 
-    <h4>1.1. �G�f�B�^���N������</h4>
+    <h4>1.1. エディタを起動する</h4>
     <p>
-      emacs�Ȃǂ��g�p���Ă��������B
+      emacsなどを使用してください。
     </p>
-    <h4>1.2. �G�f�B�^�Ńv���O�������쐬����</h4>
+    <h4>1.2. エディタでプログラムを作成する</h4>
     <p>
-      1����100�܂ŏ��������Ă����āA�ȉ��̂悤�ɁA���̓s�x���ʂ�\������v���O������C�ō쐬���Ă��������B<br>
+      1から100まで順次足していって、以下のように、その都度結果を表示するプログラムをCで作成してください。<br>
     </p>
     <pre>
 1 1
@@ -98,227 +98,227 @@
 4 10
 ...</pre>
 
-    <h4>1.3. �v���O������ۑ�����</h4>
+    <h4>1.3. プログラムを保存する</h4>
     <p>
-      �t�@�C����<span>ctest1.c</span> �̖��O�ŁA�e���̐ݒ肵�����K�p�f�B���N�g���ɕۑ����Ă��������B
+      ファイルを<span>ctest1.c</span> の名前で、各自の設定した演習用ディレクトリに保存してください。
     </p>
 
-    <h3>2. �v���O�����̃R���p�C��</h3>
+    <h3>2. プログラムのコンパイル</h3>
     <p>
-      �R�}���h�v�����v�g�iGNOME�[���j���N�����A�z�[���f�B���N�g�����牉�K�p�f�B���N�g���Ɉړ����܂��B<br>
-      gcc�R�}���h��p���ď�L�ō쐬�����v���O�������R���p�C�����Ă��������B
+      コマンドプロンプト（GNOME端末）を起動し、ホームディレクトリから演習用ディレクトリに移動します。<br>
+      gccコマンドを用いて上記で作成したプログラムをコンパイルしてください。
     </p>
 
     <pre>$gcc -o ctest1 ctest1.c</pre>
 
-    <h3>3. �v���O�����̎��s�E�����o��</h3>
+    <h3>3. プログラムの実行・書き出し</h3>
     <p>
-      �w��ǂ���̌��ʂ��f���o����邩�ȉ��Ŋm�F��
+      指定どおりの結果が吐き出されるか以下で確認し
     </p>
 
     <pre>$./ctest1</pre>
 
-    <p>�ȉ��Ō��ʂ��f�[�^�t�@�C���i�����ł�<span>ctest1.dat</span>)�ɏ����o���Ă��������B</p>
+    <p>以下で結果をデータファイル（ここでは<span>ctest1.dat</span>)に書き出してください。</p>
 
     <pre>$./ctest1 > ctest1.dat</pre>
 
     <blockquote>
-      ����L�� ">"�@��"���_�C���N�g"�ƌ����A��ʂɕ\�������͂��̃f�[�^���A">"�̂��ƂɎw�肵���t�@�C���i�����ł�ctest1.dat)�ɏo�͂��Ă��܂��B
+      ※上記の ">"　は"リダイレクト"と言い、画面に表示されるはずのデータを、">"のあとに指定したファイル（ここではctest1.dat)に出力しています。
     </blockquote>
 
-    <h3>4. ���ʂ̃O���t��</h3>
+    <h3>4. 結果のグラフ化</h3>
 
-    ��L�ō쐬�����f�[�^�t�@�C������O���t���쐬���܂��B<br>
-    �{���K�ł́AGNUPLOT���g�p���܂��B�F�����PC��default��Ԃł́AGNUPLOT���C���X�g�[������Ă��܂���B�ȉ��̎菇�Ŋe���A�C���X�g�[�����Ă��������B<br>
+    上記で作成したデータファイルからグラフを作成します。<br>
+    本演習では、GNUPLOTを使用します。皆さんのPCのdefault状態では、GNUPLOTがインストールされていません。以下の手順で各自、インストールしてください。<br>
 
     <blockquote>
 
-      ��A)2018,2019,2020,2021�N�x�����@�������Ă��āACentOS6.7��windows8������windows10(64bit��)�̏��VirtualBox����Đ���ɓ��삷��w���́ACentOS��"gnuplot"���C���X�g�[�����āA���l�v�Z�������ʂ��O���t������B
+      ※A)2018,2019,2020,2021年度推奨機を持っていて、CentOS6.7がwindows8或いはwindows10(64bit版)の上でVirtualBoxを介して正常に動作する学生は、CentOSに"gnuplot"をインストールして、数値計算した結果をグラフ化する。
 
-<pre> ���Ӂj���w����windows7,8��install����Ă������A���̌��windows10��update�����ꍇ�́A<br /> 
-windows10��VirtualBox����install���Ă���A�ȉ��̍�Ƃ��s�����ƁB<br />
-�i�A���A�K�v�ȃt�@�C�����o�b�N�A�b�v�����Ă����install���邱�ƁB�j
+<pre> 注意）入学時にwindows7,8がinstallされていたが、その後にwindows10にupdateした場合は、<br /> 
+windows10にVirtualBoxを再installしてから、以下の作業を行うこと。<br />
+（但し、必要なファイルをバックアップをしてから再installすること。）
 </pre>
 
-<pre> Windows���N�����āF</pre>
-<pre> I) �l�b�g���[�N�ڑ�����B</pre>
-<pre> II) CentOS���N������B�A�v���P�[�V����-->�V�X�e���c�[��-->�\�t�g�E�G�A��I�ԁB
-����̌�����gnuplot��T���B</pre>
-<pre> III)�ꗗ���� A program for plotting mathematical expressions and data (gnuplot-4.2.6-2.el6(x86_64))��T���B</pre>
+<pre> Windowsを起動して：</pre>
+<pre> I) ネットワーク接続する。</pre>
+<pre> II) CentOSを起動する。アプリケーション-->システムツール-->ソフトウエアを選ぶ。
+左上の検索でgnuplotを探す。</pre>
+<pre> III)一覧から A program for plotting mathematical expressions and data (gnuplot-4.2.6-2.el6(x86_64))を探す。</pre>
 
-<pre>IV)�����Ƀ`�F�b�N������āA�K�p�������B</pre>
+<pre>IV)左側にチェックをいれて、適用を押す。</pre>
 
-<pre>V)2�̃t�@�C�����\�������B�������C���X�g�[���{�^���������ăC���X�g�[������B</pre> 
-<pre>(����)���̍ہAroot �̃p�X���[�h���������Bdefault ��Ԃ̃p�X���[�h�� password �ł���B
-�������͂���ƃC���X�g�[�����n�܂�B</pre>
+<pre>V)2つのファイルが表示される。それらをインストールボタンを押してインストールする。</pre> 
+<pre>(注意)その際、root のパスワードをきかれる。default 状態のパスワードは password である。
+これを入力するとインストールが始まる。</pre>
     </blockquote>
 
     <blockquote>
 
-      ��)�ŋ߂�Mac (MacOS El Capitan/Sierra)���g���Ă���w���́A�ȉ��̎菇��install ����B
-<pre>i) macOS �p�p�b�P�[�W�}�l�[�W���[�̃C���X�g�[��
+      ※)最近のMac (MacOS El Capitan/Sierra)を使っている学生は、以下の手順でinstall する。
+<pre>i) macOS 用パッケージマネージャーのインストール
 
-Console��ʂ��� <br />
+Console画面から <br />
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-�Ƒł���Homebrew��install����B<br />
+と打ってHomebrewをinstallする。<br />
 </pre>
-<pre>ii) AquaTerm���C���X�g�[������B
+<pre>ii) AquaTermをインストールする。
 https://sourceforge.net/projects/aquaterm/files/
 </pre>
-<pre>iii) X11���C���X�g�[������B
+<pre>iii) X11をインストールする。
 https://www.xquartz.org/</pre>
-<pre>iv) Console��ʂ��� <br />
+<pre>iv) Console画面から <br />
 brew install gnuplot --with-aquaterm --with-x11
 
-�Ƒł���gnuplot��install����B<br />
+と打ってgnuplotをinstallする。<br />
 </pre>
 
     </blockquote>
 
     <blockquote>
 
-      ��A)2017�N�x�����@�������Ă��āAUbuntu��windows8������windows10(64bit��)�̏��VirtualBox����Đ���ɓ��삷��w���́AUbuntu��"gnuplot"���C���X�g�[�����āA���l�v�Z�������ʂ��O���t������B
+      ※A)2017年度推奨機を持っていて、Ubuntuがwindows8或いはwindows10(64bit版)の上でVirtualBoxを介して正常に動作する学生は、Ubuntuに"gnuplot"をインストールして、数値計算した結果をグラフ化する。
 
-<pre> ���Ӂj���w����windows7,8��install����Ă������A���̌��windows10��update�����ꍇ�́A<br /> 
-windows10��VirtualBox����install���Ă���A�ȉ��̍�Ƃ��s�����ƁB<br />
-�i�A���A�K�v�ȃt�@�C�����o�b�N�A�b�v�����Ă����install���邱�ƁB�j
+<pre> 注意）入学時にwindows7,8がinstallされていたが、その後にwindows10にupdateした場合は、<br /> 
+windows10にVirtualBoxを再installしてから、以下の作業を行うこと。<br />
+（但し、必要なファイルをバックアップをしてから再installすること。）
 </pre>
 
-<pre> Windows���N�����āF</pre>
-<pre> I) �l�b�g���[�N�ڑ�����B</pre>
-<pre> II) Ubuntu���N������B�V�X�e��-->�Ǘ�-->�\�t�g�E�G�A�̒ǉ�/�폜��I�ԁB
-����̌�����gnuplot��T���B</pre>
-<pre> III)�ꗗ���� A program for plotting mathematical expressions and data (gnuplot-4.2.6-2.el6(x86_64))��T���B</pre>
+<pre> Windowsを起動して：</pre>
+<pre> I) ネットワーク接続する。</pre>
+<pre> II) Ubuntuを起動する。システム-->管理-->ソフトウエアの追加/削除を選ぶ。
+左上の検索でgnuplotを探す。</pre>
+<pre> III)一覧から A program for plotting mathematical expressions and data (gnuplot-4.2.6-2.el6(x86_64))を探す。</pre>
 
-<pre>IV)�����Ƀ`�F�b�N������āA�K�p�������B</pre>
+<pre>IV)左側にチェックをいれて、適用を押す。</pre>
 
-<pre>V)2�̃t�@�C�����\�������B�������C���X�g�[���{�^���������ăC���X�g�[������B</pre> 
-<pre>(����)���̍ہAroot �̃p�X���[�h���������Bdefault ��Ԃ̃p�X���[�h�� password �ł���B
-�������͂���ƃC���X�g�[�����n�܂�B</pre>
+<pre>V)2つのファイルが表示される。それらをインストールボタンを押してインストールする。</pre> 
+<pre>(注意)その際、root のパスワードをきかれる。default 状態のパスワードは password である。
+これを入力するとインストールが始まる。</pre>
     </blockquote>
 
     <blockquote>
 
-      ��A)2016�N�x�����@�������Ă��āACentOS6.5��windows8������windows10(64bit��)�̏��VirtualBox����Đ���ɓ��삷��w���́ACentOS��"gnuplot"���C���X�g�[�����āA���l�v�Z�������ʂ��O���t������B
+      ※A)2016年度推奨機を持っていて、CentOS6.5がwindows8或いはwindows10(64bit版)の上でVirtualBoxを介して正常に動作する学生は、CentOSに"gnuplot"をインストールして、数値計算した結果をグラフ化する。
 
-<pre> ���Ӂj���w����windows7,8��install����Ă������A���̌��windows10��update�����ꍇ�́A<br /> 
-windows10��VirtualBox����install���Ă���A�ȉ��̍�Ƃ��s�����ƁB<br />
-�i�A���A�K�v�ȃt�@�C�����o�b�N�A�b�v�����Ă����install���邱�ƁB�j
+<pre> 注意）入学時にwindows7,8がinstallされていたが、その後にwindows10にupdateした場合は、<br /> 
+windows10にVirtualBoxを再installしてから、以下の作業を行うこと。<br />
+（但し、必要なファイルをバックアップをしてから再installすること。）
 </pre>
 
-<pre> Windows���N�����āF</pre>
-<pre> I) �l�b�g���[�N�ڑ�����B</pre>
-<pre> II) CentOS���N������B�V�X�e��-->�Ǘ�-->�\�t�g�E�G�A�̒ǉ�/�폜��I�ԁB
-����̌�����gnuplot��T���B</pre>
-<pre> III)�ꗗ���� A program for plotting mathematical expressions and data (gnuplot-4.2.6-2.el6(x86_64))��T���B</pre>
+<pre> Windowsを起動して：</pre>
+<pre> I) ネットワーク接続する。</pre>
+<pre> II) CentOSを起動する。システム-->管理-->ソフトウエアの追加/削除を選ぶ。
+左上の検索でgnuplotを探す。</pre>
+<pre> III)一覧から A program for plotting mathematical expressions and data (gnuplot-4.2.6-2.el6(x86_64))を探す。</pre>
 
-<pre>IV)�����Ƀ`�F�b�N������āA�K�p�������B</pre>
+<pre>IV)左側にチェックをいれて、適用を押す。</pre>
 
-<pre>V)2�̃t�@�C�����\�������B�������C���X�g�[���{�^���������ăC���X�g�[������B</pre> 
-<pre>(����)���̍ہAroot �̃p�X���[�h���������Bdefault ��Ԃ̃p�X���[�h�� password �ł���B
-�������͂���ƃC���X�g�[�����n�܂�B</pre>
+<pre>V)2つのファイルが表示される。それらをインストールボタンを押してインストールする。</pre> 
+<pre>(注意)その際、root のパスワードをきかれる。default 状態のパスワードは password である。
+これを入力するとインストールが始まる。</pre>
     </blockquote>
 
     <blockquote>
-      ��A)2015�N�x�����@�������Ă��āACentOS6.3��windows8(64bit)�̏�Ő���ɓ��삷��w���́ACentOS��"gnuplot"���C���X�g�[�����āA���l�v�Z�������ʂ��O���t������B
+      ※A)2015年度推奨機を持っていて、CentOS6.3がwindows8(64bit)の上で正常に動作する学生は、CentOSに"gnuplot"をインストールして、数値計算した結果をグラフ化する。
 
-<pre> Windows���N�����āF</pre>
-<pre> I) �l�b�g���[�N�ڑ�����B</pre>
-<pre> II) CentOS���N������B�V�X�e��-->�Ǘ�-->�\�t�g�E�G�A�̒ǉ�/�폜��I�ԁB
-����̌�����gnuplot��T���B</pre>
-<pre> III)�ꗗ���� A program for plotting mathematical expressions and data (gnuplot-4.2.6-2.el6(x86_64))��T���B</pre>
+<pre> Windowsを起動して：</pre>
+<pre> I) ネットワーク接続する。</pre>
+<pre> II) CentOSを起動する。システム-->管理-->ソフトウエアの追加/削除を選ぶ。
+左上の検索でgnuplotを探す。</pre>
+<pre> III)一覧から A program for plotting mathematical expressions and data (gnuplot-4.2.6-2.el6(x86_64))を探す。</pre>
 
-<pre>IV)�����Ƀ`�F�b�N������āA�K�p�������B</pre>
+<pre>IV)左側にチェックをいれて、適用を押す。</pre>
 
-<pre>V)2�̃t�@�C�����\�������B�������C���X�g�[���{�^���������ăC���X�g�[������B</pre> 
+<pre>V)2つのファイルが表示される。それらをインストールボタンを押してインストールする。</pre> 
     </blockquote>
 
     <blockquote>
-      ��B)windows�̏��CentOS���C���X�g�[������ĂȂ�PC�ɑ΂��ẮA
-"MinGW"��"gnuplot"��windows�ɃC���X�g�[�����āA<br />
-���l�v�Z�������ʂ��O���t������B
-(VirtualBox����install���Ă�CentOS���N�����Ȃ��ꍇ��CentOS��password��Y�ꂽ�ꍇ���܂ށB)<br />
+      ※B)windowsの上にCentOSがインストールされてないPCに対しては、
+"MinGW"と"gnuplot"をwindowsにインストールして、<br />
+数値計算した結果をグラフ化する。
+(VirtualBoxを再installしてもCentOSが起動しない場合やCentOSのpasswordを忘れた場合も含む。)<br />
 
-��) �ȉ��̃T�C�g https://webdav.fun.ac.jp/��upload����Ă���2��pdf�t�@�C���́A<br />
-<a href="./MinGW gnuplot �C���X�g�[���菇.pdf">�����炩��_�E�����[�h�ł��܂��iMinGW gnuplot �C���X�g�[���菇.pdf�j</a> <br />
-<a href="./�g����.pdf">�����炩��_�E�����[�h�ł��܂��i�g����.pdf�j</a> <br />
-������悭�ǂ�ŃC���X�g�[������B
+注) 以下のサイト https://webdav.fun.ac.jp/にuploadされている2つのpdfファイルは、<br />
+<a href="./MinGW gnuplot インストール手順.pdf">こちらからダウンロードできます（MinGW gnuplot インストール手順.pdf）</a> <br />
+<a href="./使い方.pdf">こちらからダウンロードできます（使い方.pdf）</a> <br />
+これをよく読んでインストールする。
 
-<pre> Windows���N�����āF</pre>
-<pre> I) �l�b�g���[�N�ڑ�����B</pre>
-<pre> II) https://webdav.fun.ac.jp/��login����B  </pre>
+<pre> Windowsを起動して：</pre>
+<pre> I) ネットワーク接続する。</pre>
+<pre> II) https://webdav.fun.ac.jp/にloginする。  </pre>
 <pre> III) https://webdav.fun.ac.jp/proself/list/propfind.go
-����"���G�n�Ȋw���K"�ɂ����B</pre> 
-<pre> IV) folder����ȉ��̂Q��pdf file���_�E�����[�h����B
+から"複雑系科学演習"にいく。</pre> 
+<pre> IV) folderから以下の２つのpdf fileをダウンロードする。
 
-"MinGW Gnuplot �C���X�g�[�� �菇.pdf",
-"�g����.pdf"</pre> 
+"MinGW Gnuplot インストール 手順.pdf",
+"使い方.pdf"</pre> 
 
-<pre> V) ������悭�ǂ�ŃC���X�g�[������B
-(��L��pdf file�ɏ�����Ă���T�C�g�ɐڑ�����ƁA�ŐV�̃o�[�W�������C���X�g�[�������B)
+<pre> V) これをよく読んでインストールする。
+(上記のpdf fileに書かれているサイトに接続すると、最新のバージョンがインストールされる。)
 </pre> 
 
     </blockquote>
 
     <blockquote>
-      ��)Mac machine ���g���Ă���l�́AMac�̃_�E�����[�h�T�C�g����
-         gnuplot�֘A�t�@�C�����_�E�����[�h���ăC���X�g�[������B
-         �����́Agnuplot�̃T�C�g����Mac machine�p��gnuplot�̃t�@�C�����_�E�����[         �h���ăC���X�g�[������B
+      ※)Mac machine を使っている人は、Macのダウンロードサイトから
+         gnuplot関連ファイルをダウンロードしてインストールする。
+         或いは、gnuplotのサイトからMac machine用のgnuplotのファイルをダウンロー         ドしてインストールする。
     </blockquote>
 
     <blockquote>
-      -------------------- �ȉ��͉ߔN�x�w���ɑ΂�����B---------------------------------------------------
+      -------------------- 以下は過年度学生に対する情報。---------------------------------------------------
       --------------------------------------------------------------------------------------------------------
       --------------------------------------------------------------------------------------------------------
 
     </blockquote>
 
     <blockquote>
-      ��C)Oepn Suse 11.3 ���C���X�g�[������Ă���w���ɑ΂��āF
-I)���[�g�� ���O�C������B�h�R���g���[���Z���^�[�h�́h�l�b�g���[�N�̃v���L�V�h�Łh�}�j���A���Ńv���L�V�̐ݒ���s���h�Ƀ`�F�b�N�������ĂȂ����Ƃ��m�F����B�X�ɁA�h���ׂẴv���g�R���œ����v���L�V���g���h�Ƀ`�F�b�N�������ĂȂ����Ƃ��m�F����B
-II)�C���^�[�l�b�g�ɐڑ�����B
+      ※C)Oepn Suse 11.3 がインストールされている学生に対して：
+I)ルートで ログインする。”コントロールセンター”の”ネットワークのプロキシ”で”マニュアルでプロキシの設定を行う”にチェックが入ってないことを確認する。更に、”すべてのプロトコルで同じプロキシを使う”にチェックが入ってないことを確認する。
+II)インターネットに接続する。
 
-      <pre> 1)�hhttp://www.gnuplot.info/�h�ɂ����A�hDownload�h
-�hPrimary download site on SourceForge�h�hGnuplot�h�h4.6.0�h��I�сA
-�hgnuplot-4.6.0.tar.gz�h��download����B
+      <pre> 1)”http://www.gnuplot.info/”にいき、”Download”
+”Primary download site on SourceForge””Gnuplot””4.6.0”を選び、
+”gnuplot-4.6.0.tar.gz”をdownloadする。
 </pre>
-<pre> 2)/root/�_�E�����[�h�֍s���Bgnuplot-4.6.0.tar.gz���_�u���N���b�N����B
-�W�J���N���b�N�����"gnuplot-4.6.0.tar.gz"���W�J����A
-/root/�_�E�����[�h�� "gnuplot-4.6.0"���ł���B
-"gnuplot-4.6.0"���E�N���b�N����open in terminal��I�ԁB</pre>
-<pre>     2-1)terminal �ɂ����� ./configure </pre>
-<pre>     2-2)terminal �ɂ����� make </pre>
-<pre>     2-3)terminal �ɂ����� make check </pre>
-<pre>     2-4) terminal �ɂ����� sudo make install </pre>
+<pre> 2)/root/ダウンロードへ行く。gnuplot-4.6.0.tar.gzをダブルクリックする。
+展開をクリックすると"gnuplot-4.6.0.tar.gz"が展開され、
+/root/ダウンロードに "gnuplot-4.6.0"ができる。
+"gnuplot-4.6.0"を右クリックしてopen in terminalを選ぶ。</pre>
+<pre>     2-1)terminal において ./configure </pre>
+<pre>     2-2)terminal において make </pre>
+<pre>     2-3)terminal において make check </pre>
+<pre>     2-4) terminal において sudo make install </pre>
 
     </blockquote>
 
     <blockquote>
-      ��D)Oepn Suse 11.2 ���� 11.1 ���C���X�g�[������Ă���w���ɑ΂��āF
-I)�h�R���g���[���Z���^�[�h�́h�l�b�g���[�N�̃v���L�V�h�Łh�}�j���A���Ńv���L�V�̐ݒ���s���h�Ƀ`�F�b�N�������ĂȂ����Ƃ��m�F����B�X�ɁA�h���ׂẴv���g�R���œ����v���L�V���g���h�Ƀ`�F�b�N�������ĂȂ����Ƃ��m�F����B
-II)�C���^�[�l�b�g�ɐڑ�����B
+      ※D)Oepn Suse 11.2 或は 11.1 がインストールされている学生に対して：
+I)”コントロールセンター”の”ネットワークのプロキシ”で”マニュアルでプロキシの設定を行う”にチェックが入ってないことを確認する。更に、”すべてのプロトコルで同じプロキシを使う”にチェックが入ってないことを確認する。
+II)インターネットに接続する。
 
-      <pre> 1)�h�R���g���[���Z���^�[�h����hYaST�h��I������B
-�V�����E�C���h�E�������B��������A�h�\�t�g�E�G�A�Ǘ��h��I������B
-(�h�R���g���[���Z���^�[�h����A���� "�\�t�g�E�G�A�̃C���X�g�[��"��I�����Ă������B)</pre>
-<pre> 2)�p�b�P�[�W�ꗗ����A
+      <pre> 1)”コントロールセンター”から”YaST”を選択する。
+新しいウインドウが現れる。そこから、”ソフトウエア管理”を選択する。
+(”コントロールセンター”から、直接 "ソフトウエアのインストール"を選択してもいい。)</pre>
+<pre> 2)パッケージ一覧から、
 libpng3,wxGTK,libmspack0,gd-devel,gnuplot
-��I��ŃC���X�g�[������B��̓I�ɂ͈ȉ��̎菇���J��Ԃ��΂����B</pre>
-<pre>     2-1)�p�b�P�[�W�����ŁA��L�̃t�@�C����T���B</pre>
-<pre>     2-2)"�C���X�g�[���{�^��"���N���b�N����B</pre>
-<pre>     2-3)"�K�p�{�^��"���N���b�N����ƃC���X�g�[�������s�����B</pre>
-<pre>     2-4) 2-1)�`2-3)���J��Ԃ��ĂT�̃t�@�C�������ׂăC���X�g�[������B</pre>
+を選んでインストールする。具体的には以下の手順を繰り返せばいい。</pre>
+<pre>     2-1)パッケージ検索で、上記のファイルを探す。</pre>
+<pre>     2-2)"インストールボタン"をクリックする。</pre>
+<pre>     2-3)"適用ボタン"をクリックするとインストールが実行される。</pre>
+<pre>     2-4) 2-1)～2-3)を繰り返して５個のファイルをすべてインストールする。</pre>
 
-<pre>����)�C���X�g�[���̓r���ŁhOpen SUSE11.1-0(�f�B�X�N�P)
-��}�����Ă��������B�h�Ƃ����x�����o�邱�Ƃ�����܂��B
-���̏ꍇ�́A�Q����x�h�X�L�b�v�{�^���h���J��Ԃ������ƃC���X�g�[�����n�܂�܂��B</pre>
+<pre>注意)インストールの途中で”Open SUSE11.1-0(ディスク１)
+を挿入してください。”という警告が出ることがあります。
+この場合は、２回程度”スキップボタン”を繰り返し押すとインストールが始まります。</pre>
     </blockquote>
 
     <blockquote>
-E)Oepn Suse 10.0 ���C���X�g�[������Ă���w���ɑ΂��āFroot ��PC��login���Ĉȉ��̂Q�̃t�@�C����
-�Ƃ��Ă���B�t�@�C���́Ahttps://webdav.fun.ac.jp/�Ɋe�� login���A
-TOP->StudentAndStaff->Course->���G�n�Ȋw���K�ɂ��� gd-2.0.35.tar.gz �� gnuplot-4.2.5.tar.gz ���Ƃ��Ă���B�����̃t�@�C����/root�ɒu���ȉ��̑�����R���\�[����ʂōs���Ă��������B(��ʂ��R�s�[���y�[�X�g����̂��ł��ȒP�Ő��m�ł��B)
+E)Oepn Suse 10.0 がインストールされている学生に対して：root でPCにloginして以下の２つのファイルを
+とってくる。ファイルは、https://webdav.fun.ac.jp/に各自 loginし、
+TOP->StudentAndStaff->Course->複雑系科学演習にある gd-2.0.35.tar.gz と gnuplot-4.2.5.tar.gz をとってくる。これらのファイルを/rootに置き以下の操作をコンソール画面で行ってください。(画面をコピー＆ペーストするのが最も簡単で正確です。)
 
       <pre># gunzip -c gd-2.0.35.tar.gz | tar xvf - </pre>
       <pre># cd gd-2.0.35</pre>
@@ -331,156 +331,156 @@ TOP->StudentAndStaff->Course->���G�n�Ȋw���K�ɂ��� gd-2.0.35.tar.gz �� gnuplot-4
       <pre># ./configure --with-png=/usr/local/include </pre>
       <pre># make</pre>
       <pre># make install</pre>
-      �Ƃ��ăC���X�g�[�����Ă��������B
+      としてインストールしてください。
     </blockquote>
 
     <blockquote>
-      ����Windows �����C���X�g�[������ĂȂ�PC�ɑ΂��ẮA�ȉ��̎菇�Ŋe���A
-�C���X�g�[�����Ă��������B
+      ※※Windows しかインストールされてないPCに対しては、以下の手順で各自、
+インストールしてください。
 
-1)�C���X�g�[���t�@�C�����Ƃ��Ă���Bhttps://webdav.fun.ac.jp/�Ɋe�� login���A
-TOP->StudentAndStaff->Course->���G�n�Ȋw���K�ɂ��� gnuplot-4.6.5.tar.gz ���Ƃ��Ă��ăf�X�N�g�b�v�ɒu���B
-2)���̃t�@�C�����f�X�N�g�b�v�ŉ𓀂���ƁA�f�X�N�g�b�v��gnuplot�Ƃ����t�H���_���ł���B������N���b�N���ăt�H���_$gnuplot$bin�܂ł����Awgnuplot���N���b�N�����gnuplot���N�������B�N����̐ݒ�Ƃ��ẮA
+1)インストールファイルをとってくる。https://webdav.fun.ac.jp/に各自 loginし、
+TOP->StudentAndStaff->Course->複雑系科学演習にある gnuplot-4.6.5.tar.gz をとってきてデスクトップに置く。
+2)このファイルをデスクトップで解凍すると、デスクトップにgnuplotというフォルダができる。これをクリックしてフォルダ$gnuplot$binまでいき、wgnuplotをクリックするとgnuplotが起動される。起動後の設定としては、
 
-      <pre> ��ʂ��E�N���b�N���āA
-Choose Font ��I�сA�t�H���g�� @MS �S�V�b�N ��I�ԁB </pre>
-      <pre> �E�N���b�N�̃��j���[����A
+      <pre> 画面を右クリックして、
+Choose Font を選び、フォント名 @MS ゴシック を選ぶ。 </pre>
+      <pre> 右クリックのメニューから、
 Update C$Documents and Settings$***$Application Data$wgnuplot.ini
-��I�ԂƁA���̐ݒ肪�ۑ������B</pre>
+を選ぶと、この設定が保存される。</pre>
 
-�����ŁA�}�[�N *** �́A���[�U�[���ł���B
-���AWindows�Ōv�Z����l�́AVisual Studio ���C���X�g�[������Ƃ����ł��傤�B
+ここで、マーク *** は、ユーザー名である。
+尚、Windowsで計算する人は、Visual Studio をインストールするといいでしょう。
     </blockquote>
 
     <blockquote>
-      �����AC����R���p�C���[���C���X�g�[������ĂȂ��Ȃ�A�ȉ���C����R���p�C���[ Cygwin, GOW (Gnu on Windows), MinGW (Minimalist Gnu for windows) �̂ЂƂ��C���X�g�[�����Ă��������B
+      もし、C言語コンパイラーがインストールされてないなら、以下のC言語コンパイラー Cygwin, GOW (Gnu on Windows), MinGW (Minimalist Gnu for windows) のひとつをインストールしてください。
     </blockquote>
 
     <blockquote>
-      �����Aeditor���C���X�g�[������ĂȂ��Ȃ�A�G�ۂȂǂ𑋂̓m�Ȃǂ���_�E�����[�h���ăC���X�g�[������Ƃ����ł��傤�B
+      もし、editorがインストールされてないなら、秀丸などを窓の杜などからダウンロードしてインストールするといいでしょう。
     </blockquote>
 
     <blockquote>
-      ������Mac �����C���X�g�[������ĂȂ�PC�ɑ΂��ẮA�ȉ��̎菇�Ŋe���A
-�C���X�g�[�����Ă��������B
-1)�C���X�g�[���t�@�C�����Ƃ��Ă���Bhttp://www.muskmelon.jp/macosx�ɐڑ����Agnuplot.app ���Ƃ��Ă��ăf�X�N�g�b�v�ɂ����B�����ŁAMac OS �̃o�[�W������ Leopard �� Tiger �Ƃł͎菇���قȂ邱�Ƃɒ��ӂ��邱�ƁB
-2)���̃t�@�C�����f�X�N�g�b�v�ŉ𓀂���ƁA�f�X�N�g�b�v��gnuplot�Ƃ����t�H���_���ł���B������N���b�N�����gnuplot���N�������B�ꍇ�ɂ���ẮA�p�X��ݒ肷��K�v������B
+      ※※※Mac しかインストールされてないPCに対しては、以下の手順で各自、
+インストールしてください。
+1)インストールファイルをとってくる。http://www.muskmelon.jp/macosxに接続し、gnuplot.app をとってきてデスクトップにおく。ここで、Mac OS のバージョンが Leopard か Tiger とでは手順が異なることに注意すること。
+2)このファイルをデスクトップで解凍すると、デスクトップにgnuplotというフォルダができる。これをクリックすればgnuplotが起動される。場合によっては、パスを設定する必要がある。
     </blockquote>
 
     <blockquote>
-      �������i���Ӂj�ŋ߂�Mac OS (�Ⴆ��El Capitan�Ȃ�)���C���X�g�[������Ă���PC�ɑ΂��ẮA�ȉ��̎菇�Ŋe���A�C���X�g�[�����Ă��������B
+      ※※※（注意）最近のMac OS (例えばEl Capitanなど)がインストールされているPCに対しては、以下の手順で各自、インストールしてください。
 
-1)�C���X�g�[���t�@�C�����Ƃ��Ă���Bhttp://www.muskmelon.jp/macosx�ɐڑ����Agnuplot.app ���Ƃ��Ă��ăf�X�N�g�b�v�ɂ����B�����́AMac�p��gnuplot-5.0.3.tar.gz�Ȃǂ��_�E�����[�h���āA������𓀂���gnuplot.app�����B����gnuplot.app���A�v���P�[�V�����Ɉړ�������B2)�g�p���́A����gnuplot.app���_�u���N���b�N���ċN������B
-3)�A���Ax11���g�����߂ɁAXQuarz���T�C�g����_�E�����[�h���ăC���X�g�[������B
+1)インストールファイルをとってくる。http://www.muskmelon.jp/macosxに接続し、gnuplot.app をとってきてデスクトップにおく。或いは、Mac用のgnuplot-5.0.3.tar.gzなどをダウンロードして、それを解凍してgnuplot.appを作る。このgnuplot.appをアプリケーションに移動させる。2)使用時は、このgnuplot.appをダブルクリックして起動する。
+3)但し、x11を使うために、XQuarzをサイトからダウンロードしてインストールする。
 
     </blockquote>
 
-    <h4>4.1. GNUPLOT���N������</h4>
+    <h4>4.1. GNUPLOTを起動する</h4>
     <p>
-      GNUPLOT�p�ɐV���ɃR�}���h�v�����v�g���N�����A���K�p�f�B���N�g���Ɉړ����܂��B<br>
-      GNUPLOT���N�����Ă��������B�i���Ȃ݂ɏI����"exit"�ł��j
+      GNUPLOT用に新たにコマンドプロンプトを起動し、演習用ディレクトリに移動します。<br>
+      GNUPLOTを起動してください。（ちなみに終了は"exit"です）
     </p>
 
     <pre>$ gnuplot </pre>
     
-    <h4>4.2. �O���t���m�F����</h4>
+    <h4>4.2. グラフを確認する</h4>
     <p>
 
-      ��L�ō쐬�����f�[�^���O���t�����A�Ӑ}�������ʂ��o�͂���Ă��邩�A�����Ŋm�F���Ă��������B
+      上記で作成したデータをグラフ化し、意図した結果が出力されているか、自分で確認してください。
     </p>
     <pre>gnuplot> plot "ctest1.dat"</pre>
     
 
-    <h4>4.3. �����ȃO���t���쐬����</h4>
+    <h4>4.3. 正式なグラフを作成する</h4>
     <p>
 
-      �m�F���Ƃꂽ��A���|�[�g�\��t���p�̃O���t���쐬���Ă��������B<br>
+      確認がとれたら、レポート貼り付け用のグラフを作成してください。<br>
     </p>
-    <p style="text-decoration:blink; color:red; font-weight:bold;"> ���|�[�g���Ɏg�p����O���t�́A���l�����āA���������Ă��邩���m�ł���K�v������܂��B<br>
-      <a href="tips/graph.html">��������Q��</a>�̏�A�K���̍ق𐮂����O���t���쐬���Ă��������B
+    <p style="text-decoration:blink; color:red; font-weight:bold;"> レポート等に使用するグラフは、他人が見て、何が書いてあるか明確である必要があります。<br>
+      <a href="tips/graph.html">こちらを参照</a>の上、必ず体裁を整えたグラフを作成してください。
     </p>
 
     <p>
-      ��<a href="HowtoGNUPLOT/Toc.html">GNUPLOT�̎g�����̊T�v</a>�B
+      ※<a href="HowtoGNUPLOT/Toc.html">GNUPLOTの使い方の概要</a>。
     </p>
 
-    <h4>4.4. ���|�[�g�p�̃O���t�������o��</h4>
+    <h4>4.4. レポート用のグラフを書き出す</h4>
     <p>
-      ���|�[�g�ɓ\��t����̍ق̃O���t����������APNG�`���ŃO���t�������o���܂��B
+      レポートに貼り付ける体裁のグラフが書けたら、PNG形式でグラフを書き出します。
     </p>
     <pre>gnuplot> set term png
 gnuplot> set output "ctest1.png"
 gnuplot> replot</pre>
     <p>
-      ����ŁA���K�p�f�B���N�g����  <span>ctest1.png</span>�Ƃ����O���t�̐}�������o����܂��B<br>
-      ���|�[�g�ɓ\��t����ɂ́AOpenOffice Writer��[�}��]�𗘗p���ĉ������B
+      これで、演習用ディレクトリに  <span>ctest1.png</span>というグラフの図が書き出されます。<br>
+      レポートに貼り付けるには、OpenOffice Writer→[挿入]を利用して下さい。
     </p>
     <p>
-      �Ȃ��A���Ƃ̏�ԁi��ʏ�ł̃O���t�`��j�ɖ߂�ɂ́A
+      なお、もとの状態（画面上でのグラフ描画）に戻るには、
     </p>
     <pre>gnuplot> set output
 gnuplot> set term X11</pre>
-    <p>�ł��B</p>
+    <p>です。</p>
 
-      �A���AWindows ��gnuplpt ���g���Ă���ꍇ�́A���Ƃ̏�ԁi��ʏ�ł̃O���t�`��j�ɖ߂�ɂ́A
+      但し、Windows でgnuplpt を使っている場合は、もとの状態（画面上でのグラフ描画）に戻るには、
     </p>
     <pre>gnuplot> set output
 gnuplot> set term windows</pre>
-    <p>�ł��B</p>
+    <p>です。</p>
 
-    <h3>5. �l�@�̂��߂̃O���t�쐬</h3>
+    <h3>5. 考察のためのグラフ作成</h3>
 
     <p>
-      ���|�[�g��_���ł͎������ʂɑ΂���l�@�����߂��܂��B<br>
-      �����ŁA�l�@�̂��߂̃O���t��p�ӂ��܂��B
+      レポートや論文では実験結果に対する考察が求められます。<br>
+      そこで、考察のためのグラフを用意します。
     </p>
     <pre>gnuplot> plot "ctest1.dat", x*(x+1)/2</pre>
     <p>
-    �Ƃ��āA��قǂ�"ctest1.dat"��x*(x+1)/2�Ƃ����֐����d�˂��O���t��`���܂��B
-    ���̐}��<span>ctest2.png</span>�Ƃ��ĕۑ�������A<br>
-    ��قǂƓ��l�̎菇�Ń��|�[�g�ɓ\��t���܂��B
+    として、先ほどの"ctest1.dat"とx*(x+1)/2という関数を重ねたグラフを描きます。
+    この図を<span>ctest2.png</span>として保存した後、<br>
+    先ほどと同様の手順でレポートに貼り付けます。
     </p>
     <pre>gnuplot> set term png
 gnuplot> set output "ctest2.png"
 gnuplot> replot</pre>
 
     <blockquote>
-    1����n�܂ł̐���̘a���v�Z���܂��傤�B
+    1からnまでの数列の和を計算しましょう。
 
-    ���Ԃɗ]�T������l�́A<a href="./mandelbrotjulia-2ndutf.pdf">�ۑ�imandelbrotjulia-2ndutf.pdf�j</a>��Mandelbrot�}�`��`���Ȃ����B <br />
+    時間に余裕がある人は、<a href="./mandelbrotjulia-2ndutf.pdf">課題（mandelbrotjulia-2ndutf.pdf）</a>のMandelbrot図形を描きなさい。 <br />
     </blockquote>
 
-    <h3>6. ���|�[�g�̍쐬</h3>
+    <h3>6. レポートの作成</h3>
 
     <p>
-<!--      �{���K�ł̃��|�[�g�ɂ��Ă�  <a href="http://sisp.fun.ac.jp/~sysinf/report.html">���|�[�g�̊�{����</a> �ɏ]���܂��B</p> -->
-    <p> ���|�[�g�ɂ́A�P�ɍ쐬�����摜(�O���t)��񎦂��邾���ł͂Ȃ��A�摜���牽���킩�邩�A�ǂ̂悤�ȃ��J�j�Y���ł����Ȃ�̂��Ȃǂ̍l�@���܂߂ċL�q���邱�ƁB
+<!--      本演習でのレポートについては  <a href="http://sisp.fun.ac.jp/~sysinf/report.html">レポートの基本事項</a> に従います。</p> -->
+    <p> レポートには、単に作成した画像(グラフ)を提示するだけではなく、画像から何がわかるか、どのようなメカニズムでそうなるのかなどの考察を含めて記述すること。
     <p>
-      ��L�̎������l�����āA
+      上記の事柄を考慮して、
     </p>
     <div>
       <br>
       <ol>
-	<li>�v���O�������X�g</li>
-	<li>1����100�܂ŏ����������a�̒l</li>
-	<li>���ʂ̃O���t</li>
-	<li>�l�@</li>
+	<li>プログラムリスト</li>
+	<li>1から100まで順次加えた和の値</li>
+	<li>結果のグラフ</li>
+	<li>考察</li>
       </ol>
     </div>
-    <p>�ɂ��āAOpenOffice Writer�𗘗p���ă��|�[�g���쐬���Ă��������B
+    <p>について、OpenOffice Writerを利用してレポートを作成してください。
     </p>
-    <h3>7. ���</h3>
+    <h3>7. 印刷</h3>
     <p>
-      OpenOffice�ō쐬�������|�[�g���APDF�֏����o���A������Ă��������B<br>
-      ���|�[�g��PDF�`���ɕϊ�����ɂ́A[�t�@�C��]��[PDF�Ƃ��ăG�N�X�|�[�g] �𗘗p���ĉ������B
+      OpenOfficeで作成したレポートを、PDFへ書き出し、印刷してください。<br>
+      レポートをPDF形式に変換するには、[ファイル]→[PDFとしてエクスポート] を利用して下さい。
     </p>
     </p>
 
-    <h3>8. ��o</h3>
+    <h3>8. 提出</h3>
     <p>
-      �{���̃��|�[�g�́A<font color="red" size="+2"><strong>��o����K�v�͂Ȃ�</strong></font>�B���񂩂�̃��|�[�g�́A<font color="red" size="+2"><strong>�S�������̎w���ɏ]�����ƁB</strong></font>
+      本日のレポートは、<font color="red" size="+2"><strong>提出する必要はない</strong></font>。次回からのレポートは、<font color="red" size="+2"><strong>担当教員の指示に従うこと。</strong></font>
     </p>
     <hr>
-    �{���ڒS���F��� ��(234����, �{��2F)</a>
+    本項目担当：川口 聡(234号室, 本棟2F)</a>
   </body>
 </html>
