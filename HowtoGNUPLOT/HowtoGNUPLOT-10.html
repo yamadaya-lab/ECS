@@ -1,23 +1,52 @@
-<html>
-<title>How to use GNUPLOT: 7</title>
-<body>
-7. ‚Q–{‚ÌŠÖ”‚ğ•\¦‚µ‚ÄA‚©‚ÂcE‰¡²‚Ì”ÍˆÍ‚àw’è‚·‚é‚É‚ÍA<br>
-Ÿ‚Ì‚æ‚¤‚É‚±‚ê‚Ü‚Å‚Ì•û–@‚ğ‘g‚İ‡‚í‚¹‚ê‚Î‚æ‚¢B<br>
-<!--<font color="maroon">If you want to draw two graphs and also want to set the range of the ordinate and the abscissa,<br>
-you have to input like the following which is the combination of aforementioned methods.</font>--><p>
-<tt>plot [0:10][0:20] x,2*x</tt><p>
-<img src="imgs/plot-07.gif"></p>
-<b>—ûK–â‘èF</b>‚RŸ‹Èü y=x(x-1)(x-2) ‚ğ‹É‘å“_‚â‹É¬“_‚ª—Ç‚­•ª‚©‚é‚æ‚¤‚È<br>
-•`‰æ”ÍˆÍ(c²E‰¡²‚Ì”ÍˆÍ)‚ğw’è‚µ‚Ä•`‚«‚È‚³‚¢B<br>
-<!--<font color="maroon"><b>Exercise:</b> Display the graph of the cubic curve y=x(x-1)(x-2) which clearly show the local minimum and maximum points.<br>
-You have to set the range of the ordinate and the abscissa adequately.</font>--><p>
-<b>‰—p–â‘è‚PF</b>x(x-1)(x-2)=0‚Ì‰ğ‚ª‚R‚Â‚ ‚é‚±‚Æ‚ğƒOƒ‰ƒt‚ğ•`‚¢‚Ä¦‚µ‚È‚³‚¢B<br>
-ƒqƒ“ƒgFy=0 ‚ÌƒOƒ‰ƒt‚ğ•`‚­‚É‚Í<tt> plot 0 </tt>‚Æ“ü—Í‚·‚ê‚Î‚æ‚¢B<br>
-<!--<font color="maroon"><b>applied question 1:</b> Prove there are three solutions for x(x-1)(x-2)=0 by displaying the graph.<br>
-To display the graph y=0, you need to input only <tt>plot 0</tt></font>--><p>
-<b>‰—p–â‘è‚QF</b>x(x-1)(x-2)=-0.5x ‚ÌÀ”‰ğ‚ÍŠô‚Â‚ ‚é‚©AƒOƒ‰ƒt‚ğ•`‚¢‚Ä’²¸‚¹‚æB<br>
-<!--<font color="maroon"><b>applied question 2:</b> How many real solutions are there for x(x-1)(x-2)=-0.5x ? Answer by observing the graphs.</font>--><p>
-<a href="HowtoGNUPLOT-09.html">‘O‚Ö(prev.)</a>E<a href="HowtoGNUPLOT-11.html">Ÿ‚Ö(next)</a>E<a href="Toc.html">–ÚŸ‚Ö(toc)</a>
-</body>
-</html>
-
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>How to use GNUPLOT: 7</title>
+	</head>
+
+<body>
+
+7. ï¼’æœ¬ã®é–¢æ•°ã‚’è¡¨ç¤ºã—ã¦ã€ã‹ã¤ç¸¦ãƒ»æ¨ªè»¸ã®ç¯„å›²ã‚‚æŒ‡å®šã™ã‚‹ã«ã¯ã€<br>
+
+æ¬¡ã®ã‚ˆã†ã«ã“ã‚Œã¾ã§ã®æ–¹æ³•ã‚’çµ„ã¿åˆã‚ã›ã‚Œã°ã‚ˆã„ã€‚<br>
+
+<!--<font color="maroon">If you want to draw two graphs and also want to set the range of the ordinate and the abscissa,<br>
+
+you have to input like the following which is the combination of aforementioned methods.</font>--><p>
+
+<tt>plot [0:10][0:20] x,2*x</tt><p>
+
+<img src="imgs/plot-07.gif"></p>
+
+<b>ç·´ç¿’å•é¡Œï¼š</b>ï¼“æ¬¡æ›²ç·š y=x(x-1)(x-2) ã‚’æ¥µå¤§ç‚¹ã‚„æ¥µå°ç‚¹ãŒè‰¯ãåˆ†ã‹ã‚‹ã‚ˆã†ãª<br>
+
+æç”»ç¯„å›²(ï¼ç¸¦è»¸ãƒ»æ¨ªè»¸ã®ç¯„å›²)ã‚’æŒ‡å®šã—ã¦æããªã•ã„ã€‚<br>
+
+<!--<font color="maroon"><b>Exercise:</b> Display the graph of the cubic curve y=x(x-1)(x-2) which clearly show the local minimum and maximum points.<br>
+
+You have to set the range of the ordinate and the abscissa adequately.</font>--><p>
+
+<b>å¿œç”¨å•é¡Œï¼‘ï¼š</b>x(x-1)(x-2)=0ã®è§£ãŒï¼“ã¤ã‚ã‚‹ã“ã¨ã‚’ã‚°ãƒ©ãƒ•ã‚’æã„ã¦ç¤ºã—ãªã•ã„ã€‚<br>
+
+ãƒ’ãƒ³ãƒˆï¼šy=0 ã®ã‚°ãƒ©ãƒ•ã‚’æãã«ã¯<tt> plot 0 </tt>ã¨å…¥åŠ›ã™ã‚Œã°ã‚ˆã„ã€‚<br>
+
+<!--<font color="maroon"><b>applied question 1:</b> Prove there are three solutions for x(x-1)(x-2)=0 by displaying the graph.<br>
+
+To display the graph y=0, you need to input only <tt>plot 0</tt></font>--><p>
+
+<b>å¿œç”¨å•é¡Œï¼’ï¼š</b>x(x-1)(x-2)=-0.5x ã®å®Ÿæ•°è§£ã¯å¹¾ã¤ã‚ã‚‹ã‹ã€ã‚°ãƒ©ãƒ•ã‚’æã„ã¦èª¿æŸ»ã›ã‚ˆã€‚<br>
+
+<!--<font color="maroon"><b>applied question 2:</b> How many real solutions are there for x(x-1)(x-2)=-0.5x ? Answer by observing the graphs.</font>--><p>
+
+<a href="HowtoGNUPLOT-09.html">å‰ã¸(prev.)</a>ãƒ»<a href="HowtoGNUPLOT-11.html">æ¬¡ã¸(next)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡ã¸(toc)</a>
+
+</body>
+
+</html>
+
+
+
+
