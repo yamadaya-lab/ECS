@@ -1,27 +1,60 @@
-<html>
-<title>How to use GNUPLOT: 17</title>
-<body>
-17. ‚Å‚Í’l‚Ì‚Â‚¢‚Ä‚¢‚È‚¢¬–Ú·‚Í‚Ç‚Ì‚æ‚¤‚Éİ’è‚·‚é‚Ì‚¾‚ë‚¤B<br>
-<!--<font color="maroon">Here, you can study how to put small ticks which don't have values.</font>--><p>
-xtics ‚É‰Á‚¦‚ÄAmxtics ‚ÆŒ¾‚¤ƒ‚[ƒhİ’è‚ª—pˆÓ‚³‚ê‚Ä‚¢‚éB<br>
-<!--<font color="maroon">In addition to xtics, there is <tt>mxtics</tt> mode.</font>--><p>
-<tt>set xtics 0,5,10</tt><br>
-<tt>set mxtics 5</tt><br>
-<tt>plot [0:10] x</tt><p>
-‚ğÀs‚µ‚Ä‚İ‚æ‚¤BiŸ‚Ì—á‚ÍA¬–Ú·‚ğ•\¦‚·‚é‚½‚ß‚É‘å‚«‚­æ‚è‚ñ‚Å‚ ‚éj<br>
-<!--<font color="maroon">Let's try the above. (The following sample is largely displayed to show small ticks.)</font>--><p>
-<img src="imgs/plot-23.gif"><p>
-0,5,10‚ÌŠÔ‚É¬‚³‚È–Ú·‚ªŒ©‚¦‚éBã‹L‚Ìw’è‚É‚æ‚èå–Ú·ŠÔ‚ğ‚T“™•ª‚·‚é‚æ‚¤‚É¬–Ú·‚ª•`‚©‚ê‚½B<br>
-c²‚É‚Í mytics ‚ÆŒ¾‚¤ƒ‚[ƒhİ’è‚ğ“¯—l‚És‚¦‚Î‚æ‚¢B<br>
-‚Ü‚½•ûŠá‚ğ¬–Ú·‚É‘Î‚µ‚Ä‚à•`‚­‚É‚Í<br>
-<!--<font color="maroon">You can see small ticks between 0 and 5, and between 5 and 10.<br>
-The above says to put small ticks which divide the interval between main ticks into 5 segments.<br>
-And if you want to display with graph paper mode where the grid line also put at small ticks, type the following.</font>--><p>
-<tt>set grid xtics mxtics ytics</tt><br>
-<tt>replot</tt><p>
-<img src="imgs/plot-24.gif"><p>
-‚Ì—l‚ÉA•ûŠá‚ğ•`‚«‚½‚¢²‚ğ’€ˆêw’è‚·‚é‚Æ—Ç‚¢B<br>
-<!--<font color="maroon">You can give for which ticks grid lines are drawn respectively.</font>--><p>
-<a href="HowtoGNUPLOT-19.html">‘O‚Ö(prev.)</a>E<a href="HowtoGNUPLOT-21.html">Ÿ‚Ö(next)</a>E<a href="Toc.html">–ÚŸ‚Ö(toc)</a>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>How to use GNUPLOT: 17</title>
+	</head>
+
+<body>
+
+17. ã§ã¯å€¤ã®ã¤ã„ã¦ã„ãªã„å°ç›®ç››ã¯ã©ã®ã‚ˆã†ã«è¨­å®šã™ã‚‹ã®ã ã‚ã†ã€‚<br>
+
+<!--<font color="maroon">Here, you can study how to put small ticks which don't have values.</font>--><p>
+
+xtics ã«åŠ ãˆã¦ã€mxtics ã¨è¨€ã†ãƒ¢ãƒ¼ãƒ‰è¨­å®šãŒç”¨æ„ã•ã‚Œã¦ã„ã‚‹ã€‚<br>
+
+<!--<font color="maroon">In addition to xtics, there is <tt>mxtics</tt> mode.</font>--><p>
+
+<tt>set xtics 0,5,10</tt><br>
+
+<tt>set mxtics 5</tt><br>
+
+<tt>plot [0:10] x</tt><p>
+
+ã‚’å®Ÿè¡Œã—ã¦ã¿ã‚ˆã†ã€‚ï¼ˆæ¬¡ã®ä¾‹ã¯ã€å°ç›®ç››ã‚’è¡¨ç¤ºã™ã‚‹ãŸã‚ã«å¤§ããå–ã‚Šè¾¼ã‚“ã§ã‚ã‚‹ï¼‰<br>
+
+<!--<font color="maroon">Let's try the above. (The following sample is largely displayed to show small ticks.)</font>--><p>
+
+<img src="imgs/plot-23.gif"><p>
+
+0,5,10ã®é–“ã«å°ã•ãªç›®ç››ãŒè¦‹ãˆã‚‹ã€‚ä¸Šè¨˜ã®æŒ‡å®šã«ã‚ˆã‚Šä¸»ç›®ç››é–“ã‚’ï¼•ç­‰åˆ†ã™ã‚‹ã‚ˆã†ã«å°ç›®ç››ãŒæã‹ã‚ŒãŸã€‚<br>
+
+ç¸¦è»¸ã«ã¯ mytics ã¨è¨€ã†ãƒ¢ãƒ¼ãƒ‰è¨­å®šã‚’åŒæ§˜ã«è¡Œãˆã°ã‚ˆã„ã€‚<br>
+
+ã¾ãŸæ–¹çœ¼ã‚’å°ç›®ç››ã«å¯¾ã—ã¦ã‚‚æãã«ã¯<br>
+
+<!--<font color="maroon">You can see small ticks between 0 and 5, and between 5 and 10.<br>
+
+The above says to put small ticks which divide the interval between main ticks into 5 segments.<br>
+
+And if you want to display with graph paper mode where the grid line also put at small ticks, type the following.</font>--><p>
+
+<tt>set grid xtics mxtics ytics</tt><br>
+
+<tt>replot</tt><p>
+
+<img src="imgs/plot-24.gif"><p>
+
+ã®æ§˜ã«ã€æ–¹çœ¼ã‚’æããŸã„è»¸ã‚’é€ä¸€æŒ‡å®šã™ã‚‹ã¨è‰¯ã„ã€‚<br>
+
+<!--<font color="maroon">You can give for which ticks grid lines are drawn respectively.</font>--><p>
+
+<a href="HowtoGNUPLOT-19.html">å‰ã¸(prev.)</a>ãƒ»<a href="HowtoGNUPLOT-21.html">æ¬¡ã¸(next)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡ã¸(toc)</a>
+
+</body>
+
+</html>
+
+
