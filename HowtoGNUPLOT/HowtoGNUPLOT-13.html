@@ -1,41 +1,88 @@
-<html>
-<title>How to use GNUPLOT: 10</title>
-<body>
-10. ‚±‚±‚Ü‚Å‚ÍŠÖ”ƒOƒ‰ƒt‚Ìì¬‚Å‚ ‚Á‚½B<br>
-<!--<font color="maroon">The above explanations are to display graphs of functions.</font>--><p>
-
-GNUPLOT‚Íƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚Æ•`‰æ‚ào—ˆ‚éB<br>
-‚±‚±‚©‚çæ‚Å‚ÍA‚æ‚­’m‚ç‚ê‚½ƒ[ƒŒƒ“ƒc•û’ö®<br>
-<!--<font color="maroon">GNUPLOT can plot arbitral numerical data in the given file.</font>--><p>
-<img src="imgs/Lorenz-eq.gif"><p>
-‚ÌƒXƒgƒŒƒ“ƒWƒAƒgƒ‰ƒNƒ^iƒJƒIƒXj‚Ì”’lƒf[ƒ^‚ğ‘èŞ‚ÉA<br>
-ƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ìƒvƒƒbƒg‚Ìd•û‚ğƒ}ƒXƒ^[‚µ‚æ‚¤B<br>
-<!--<font color="maroon">Let us challenge data plot of Lorenz attractor as our teaching material.</font>--><p>
-
-‹³Şƒf[ƒ^‚Í Lorenz.txt ‚ÆŒ¾‚¤–¼‘O‚Ìƒtƒ@ƒCƒ‹‚Éû˜^‚³‚ê‚Ä‚¢‚éB<br>
-<!--<font color="maroon">Attractor data is stored in the file "Lorenz.txt"</font>--><p> 
-<img src="imgs/Lorenz-txt.gif"><p>
-¶‚©‚ç‚P—ñ–Úi—ñƒJƒ‰ƒ€column‚ÆŒÄ‚Ôj‚Í‚ğ•\‚µ0‚©‚ç60‚Ü‚Å‚ ‚éB<br>
-‚Q—ñ–Ú‚ªX(t)C‚R—ñ–Ú‚ªY(t)A‚S—ñ–Ú‚ªZ(t)‚Ì”’lƒf[ƒ^‚Å‚ ‚éB<br>
-Šeƒf[ƒ^‚ÌŠÔ‚Í“K“–‚È”‚Ì‹ó”’‚É‚æ‚Á‚Ä‹æØ‚ç‚ê‚Ä‚¢‚éB<br>
-<!--<font color="maroon">The value of 1st column is time.<br>
-2nd column X(t), 3rd column Y(t), and 4th column is Z(t).<br>
-Some spaces separate respective data values.</font>--><p>
-
-©•ª‚ÅƒvƒƒOƒ‰ƒ€‚ğì¬‚µ‚ÄAGNUPLOT‚ÅŒ‹‰Ê‚ğ•`‚«‚½‚¢‚Æ‚«‚Í<br>
-‚±‚Ì‚æ‚¤‚ÈŒ`‚Åƒtƒ@ƒCƒ‹‚Éo—Í‚·‚é‚æ‚¤‚ÉƒvƒƒOƒ‰ƒ~ƒ“ƒO‚·‚ê‚Î‚æ‚¢B<br>
-<!--<font color="maroon">If you want to display results produced by your program,<br>
-you only need to write your code which output data separated by spaces.</font>--><p>
-
-<b>¬‹ZF</b>Lorenz.txt‚Ì‚Ps–Ú‚Í‚P•¶š–Ú‚ª”‚Ån‚Ü‚Á‚Ä‚¢‚éBGNUPLOT‚Í‚±‚Ì‚æ‚¤‚Ès‚ğƒRƒƒ“ƒgs‚Æ‰ğß‚µ“Ç‚İÌ‚Ä‚éB<br>
-ƒRƒƒ“ƒgs‚ÍAƒtƒ@ƒCƒ‹‚Ì“r’†‚É‚à©—R‚É‘}“üo—ˆ‚éB<br>
-<!--<font color="maroon"><b>simple trick :</b>In "Lorenz.txt" 1st line starts with '#'. This character means this line is comment.<br>
-You can freely insert comment line everywhere in data file.</font>--><p>
-<hr>
-<b>—pŒêF</b>‹æØ‚è‚ğ•\‚í‚·‚½‚ß‚É—p‚¢‚ç‚ê‚é•¶š‚ğu‹æØ‚è•¶šv‚È‚Ç‚ÆŒÄ‚ÔB<br>
-‚±‚±‚Å‚Í‹ó”’‚ª‹æØ‚è•¶š‚¾‚ªA‚Ù‚©‚Éƒ^ƒu‚âƒJƒ“ƒ}‚ğ‹æØ‚è•¶š‚É‚·‚éê‡‚È‚Ç‚ª‚ ‚éB<br>
-<!--<font color="maroon"><b>Term :</b>Some special character which means to separate data values is called a separator.<br>
-Spaces are separator in GNUPLOT world, while tab and comma are often interpretted as separators in other applications.</font>--><p> 
-<a href="HowtoGNUPLOT-12.html">‘O‚Ö(prev.)</a>E<a href="HowtoGNUPLOT-14.html">Ÿ‚Ö(next)</a>E<a href="Toc.html">–ÚŸ‚Ö(toc)</a>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>How to use GNUPLOT: 10</title>
+	</head>
+
+<body>
+
+10. ã“ã“ã¾ã§ã¯é–¢æ•°ã‚°ãƒ©ãƒ•ã®ä½œæˆã§ã‚ã£ãŸã€‚<br>
+
+<!--<font color="maroon">The above explanations are to display graphs of functions.</font>--><p>
+
+
+
+GNUPLOTã¯ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­è¾¼ã¿ã¨æç”»ã‚‚å‡ºæ¥ã‚‹ã€‚<br>
+
+ã“ã“ã‹ã‚‰å…ˆã§ã¯ã€ã‚ˆãçŸ¥ã‚‰ã‚ŒãŸãƒ­ãƒ¼ãƒ¬ãƒ³ãƒ„æ–¹ç¨‹å¼<br>
+
+<!--<font color="maroon">GNUPLOT can plot arbitral numerical data in the given file.</font>--><p>
+
+<img src="imgs/Lorenz-eq.gif"><p>
+
+ã®ã‚¹ãƒˆãƒ¬ãƒ³ã‚¸ã‚¢ãƒˆãƒ©ã‚¯ã‚¿ï¼ˆã‚«ã‚ªã‚¹ï¼‰ã®æ•°å€¤ãƒ‡ãƒ¼ã‚¿ã‚’é¡Œæã«ã€<br>
+
+ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ—ãƒ­ãƒƒãƒˆã®ä»•æ–¹ã‚’ãƒã‚¹ã‚¿ãƒ¼ã—ã‚ˆã†ã€‚<br>
+
+<!--<font color="maroon">Let us challenge data plot of Lorenz attractor as our teaching material.</font>--><p>
+
+
+
+æ•™æãƒ‡ãƒ¼ã‚¿ã¯ Lorenz.txt ã¨è¨€ã†åå‰ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«åéŒ²ã•ã‚Œã¦ã„ã‚‹ã€‚<br>
+
+<!--<font color="maroon">Attractor data is stored in the file "Lorenz.txt"</font>--><p> 
+
+<img src="imgs/Lorenz-txt.gif"><p>
+
+å·¦ã‹ã‚‰ï¼‘åˆ—ç›®ï¼ˆåˆ—ï¼ã‚«ãƒ©ãƒ ï¼columnã¨å‘¼ã¶ï¼‰ã¯æ™‚åˆ»ã‚’è¡¨ã—0ã‹ã‚‰60ã¾ã§ã‚ã‚‹ã€‚<br>
+
+ï¼’åˆ—ç›®ãŒX(t)ï¼Œï¼“åˆ—ç›®ãŒY(t)ã€ï¼”åˆ—ç›®ãŒZ(t)ã®æ•°å€¤ãƒ‡ãƒ¼ã‚¿ã§ã‚ã‚‹ã€‚<br>
+
+å„ãƒ‡ãƒ¼ã‚¿ã®é–“ã¯é©å½“ãªæ•°ã®ç©ºç™½ã«ã‚ˆã£ã¦åŒºåˆ‡ã‚‰ã‚Œã¦ã„ã‚‹ã€‚<br>
+
+<!--<font color="maroon">The value of 1st column is time.<br>
+
+2nd column X(t), 3rd column Y(t), and 4th column is Z(t).<br>
+
+Some spaces separate respective data values.</font>--><p>
+
+
+
+è‡ªåˆ†ã§ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’ä½œæˆã—ã¦ã€GNUPLOTã§çµæœã‚’æããŸã„ã¨ãã¯<br>
+
+ã“ã®ã‚ˆã†ãªå½¢ã§ãƒ•ã‚¡ã‚¤ãƒ«ã«å‡ºåŠ›ã™ã‚‹ã‚ˆã†ã«ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°ã™ã‚Œã°ã‚ˆã„ã€‚<br>
+
+<!--<font color="maroon">If you want to display results produced by your program,<br>
+
+you only need to write your code which output data separated by spaces.</font>--><p>
+
+
+
+<b>å°æŠ€ï¼š</b>Lorenz.txtã®ï¼‘è¡Œç›®ã¯ï¼‘æ–‡å­—ç›®ãŒï¼ƒã§å§‹ã¾ã£ã¦ã„ã‚‹ã€‚GNUPLOTã¯ã“ã®ã‚ˆã†ãªè¡Œã‚’ã‚³ãƒ¡ãƒ³ãƒˆè¡Œã¨è§£é‡ˆã—èª­ã¿æ¨ã¦ã‚‹ã€‚<br>
+
+ã‚³ãƒ¡ãƒ³ãƒˆè¡Œã¯ã€ãƒ•ã‚¡ã‚¤ãƒ«ã®é€”ä¸­ã«ã‚‚è‡ªç”±ã«æŒ¿å…¥å‡ºæ¥ã‚‹ã€‚<br>
+
+<!--<font color="maroon"><b>simple trick :</b>In "Lorenz.txt" 1st line starts with '#'. This character means this line is comment.<br>
+
+You can freely insert comment line everywhere in data file.</font>--><p>
+
+<hr>
+
+<b>ç”¨èªï¼š</b>åŒºåˆ‡ã‚Šã‚’è¡¨ã‚ã™ãŸã‚ã«ç”¨ã„ã‚‰ã‚Œã‚‹æ–‡å­—ã‚’ã€ŒåŒºåˆ‡ã‚Šæ–‡å­—ã€ãªã©ã¨å‘¼ã¶ã€‚<br>
+
+ã“ã“ã§ã¯ç©ºç™½ãŒåŒºåˆ‡ã‚Šæ–‡å­—ã ãŒã€ã»ã‹ã«ã‚¿ãƒ–ã‚„ã‚«ãƒ³ãƒã‚’åŒºåˆ‡ã‚Šæ–‡å­—ã«ã™ã‚‹å ´åˆãªã©ãŒã‚ã‚‹ã€‚<br>
+
+<!--<font color="maroon"><b>Term :</b>Some special character which means to separate data values is called a separator.<br>
+
+Spaces are separator in GNUPLOT world, while tab and comma are often interpretted as separators in other applications.</font>--><p> 
+
+<a href="HowtoGNUPLOT-12.html">å‰ã¸(prev.)</a>ãƒ»<a href="HowtoGNUPLOT-14.html">æ¬¡ã¸(next)</a>ãƒ»<a href="Toc.html">ç›®æ¬¡ã¸(toc)</a>
+
+</body>
+
+</html>
+
+
